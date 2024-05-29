@@ -1,5 +1,5 @@
-import useFetch  from "../components/useFetch";
-import BlockPreview from "../components/pages/BlockList/BlockPreview";
+import useFetch  from "../../components/useFetch";
+import BlockPreview from "../../components/pages/BlockList/BlockPreview";
 
 export default function BlockList() {
 
@@ -13,7 +13,7 @@ export default function BlockList() {
 
         { error && <div>{ error }</div> }
         { isPending && <div>Loading...</div> }
-        { blocks && blocks.map(block => (<BlockPreview block={block} />)) }
+        { blocks.map(block => (<BlockPreview key={block.id} block={block} />)) }
 
       </div>
     );

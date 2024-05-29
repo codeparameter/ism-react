@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
-import BlockList from './pages/BlockList'
+import BlockDetails from "./pages/blocks/BlockDetails";
+import BlockList from './pages/blocks/BlockList'
 import Home from './pages/Home'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/blocks/" element={<BlockList/>} />
+          <Route path="/blocks/:id" element={<BlockDetails/>} />
         </Routes>
       </BrowserRouter>
 
