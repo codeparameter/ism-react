@@ -7,11 +7,14 @@ function App() {
   return (
     <div className="app">
       <header></header>
-      <nav></nav>
       {/* <main></main>
       <aside></aside> */}
 
       <BrowserRouter>
+        <nav>
+          <Link to="/">Home</Link> <br/>
+          <Link to="/blocks/">Blocks</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/blocks/" element={<BlockList/>} />
