@@ -6,6 +6,7 @@ export default function BlockPreview({ block }) {
       <Link className="block-preview" to={`/blocks/${block.id}`}>
             <h2>{ block.material_name }</h2>
             <p> { block.city_name }</p>
+            <p> { block.length }</p>
       </Link>
     );
 }

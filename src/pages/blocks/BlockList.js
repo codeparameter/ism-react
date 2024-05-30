@@ -3,7 +3,7 @@ import BlockPreview from "../../components/pages/BlockList/BlockPreview";
 
 export default function BlockList() {
 
-    const { data, isPending, error } = useFetch('http://localhost:8000/api/blocks/');
+    const { data, isPending, error } = useFetch('blocks/');
     
     const blocks = data ? data.results : []
 

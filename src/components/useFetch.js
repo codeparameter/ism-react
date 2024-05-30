@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
+import env from "react-dotenv";
 
-export default function useFetch(url, params={}) {
+export default function useFetch(path, options={}) {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
 
-    fetch(url, { ...params })
+    fetch(env.BASE_API + path, options)
       .then(res => {
         if (!res.ok) { // error coming back from server
           throw Error('could not fetch the data for that resource');

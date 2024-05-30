@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
+import {useParams}  from "react-router-dom";
 import useFetch  from "../../components/useFetch";
 
 export default function BlockDetails() {
 
-    const {id} = useParams()
+    const {id} = useParams();
 
-    const { data: block, isPending, error } = useFetch(`http://localhost:8000/api/blocks/${id}`);
+    const { data: block, isPending, error } = useFetch(`blocks/${id}`);
 
     return (
       <div className="">
@@ -17,6 +17,7 @@ export default function BlockDetails() {
             <>
             <h2>{ block.material_name }</h2>
             <p> { block.city_name }</p>
+            <p> { block.length }</p>
             </>
         )}
 
