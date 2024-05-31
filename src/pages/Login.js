@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { TokenContext } from "../App";
+import { GlobalContext } from "../App";
 import useFetch from "../components/useFetch";
 
 export default function Login() {
 
-    const {token, setToken} = useContext(TokenContext);
+    const {token, setToken} = useContext(GlobalContext);
     
     const { data, isPending, error } = useFetch('auth/', {
         method: "POST",
