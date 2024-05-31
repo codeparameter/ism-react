@@ -1,5 +1,6 @@
-import {React, useState, createContext} from "react";
-import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
+// import {React, useState, createContext} from "react";
+import {React, useState} from "react";
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 import Admin from "./pages/Admin/Admin";
 import BlockDetails from "./pages/blocks/BlockDetails";
@@ -7,11 +8,11 @@ import BlockList from './pages/blocks/BlockList';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
-export const GlobalContext = createContext(null);
+// export const GlobalContext = createContext(null);
 
 function App() {
 
-  const [token, setToken] = useState("");
+  // const [token, setToken] = useState("");
 
   return (
     <div className="app">
@@ -19,7 +20,7 @@ function App() {
       {/* <main></main>
       <aside></aside> */}
       
-      <GlobalContext.Provider value={{token, setToken}} >
+      {/* <GlobalContext.Provider value={{token, setToken}} > */}
         <BrowserRouter>
           <nav>
             <Link to="/">Home</Link> <br/>
@@ -36,7 +37,7 @@ function App() {
             <Route path="/blocks/:id/" element={<BlockDetails/>} />
           </Routes>
         </BrowserRouter>
-      </GlobalContext.Provider>
+      {/* </GlobalContext.Provider> */}
 
       <footer></footer>
     </div>
