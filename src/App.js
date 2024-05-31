@@ -1,6 +1,7 @@
 import {React, useState, createContext} from "react";
 import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 
+import Admin from "./pages/Admin/Admin";
 import BlockDetails from "./pages/blocks/BlockDetails";
 import BlockList from './pages/blocks/BlockList';
 import Home from './pages/Home';
@@ -23,13 +24,14 @@ function App() {
           <nav>
             <Link to="/">Home</Link> <br/>
             <Link to="/blocks/">Blocks</Link><br/>
-            <Link to="/login/">login</Link>
+            <Link to="/login/">login</Link><br />
+            <Link to="/admin/">admin</Link>
           </nav>
           <Routes>
             
             <Route path="/" element={<Home/>} />
-            {/* <Route path="/admin" element={<Admin/>} /> */}
-            <Route path="/login" element={<Login/>} />
+            <Route path="/admin/*" element={<Admin/>} />
+            <Route path="/login/" element={<Login/>} />
             <Route path="/blocks/" element={<BlockList/>} />
             <Route path="/blocks/:id/" element={<BlockDetails/>} />
           </Routes>
