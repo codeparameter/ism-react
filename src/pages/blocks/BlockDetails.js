@@ -5,7 +5,7 @@ export default function BlockDetails() {
 
     const {id} = useParams();
 
-    const { data: block, isPending, error } = useFetch(`blocks/${id}`);
+    const { data: block, isPending, error } = useFetch(`blocks/${id}/`);
 
     return (
       <div className="">

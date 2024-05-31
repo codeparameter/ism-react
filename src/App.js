@@ -31,7 +31,7 @@ function App() {
             {/* <Route path="/admin" element={<Admin/>} /> */}
             <Route path="/login" element={<Login/>} />
             <Route path="/blocks/" element={<BlockList/>} />
-            <Route path="/blocks/:id" element={<BlockDetails/>} />
+            <Route path="/blocks/:id/" element={<BlockDetails/>} />
           </Routes>
         </BrowserRouter>
       </TokenContext.Provider>
