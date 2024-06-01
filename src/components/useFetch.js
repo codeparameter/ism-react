@@ -35,7 +35,7 @@ export default function useFetch(path, options={}) {
 
   useEffect(() => {
     Fetch({setPnd, setRes, setErr, path, options});
-  }, []);
+  }, [path]);
 
   return { pnd, res, err };
 }

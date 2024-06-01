@@ -1,16 +1,35 @@
+import { useState } from "react";
 import useFetch  from "../../components/useFetch";
 import BlockPreview from "../../components/pages/BlockList/BlockPreview";
 
 export default function BlockList() {
 
-    const{ pnd, res, err } = useFetch('blocks/');
+    const basePath = 'blocks/';
+
+    const [path, setPath] = useState(basePath);
+
+    const{ pnd, res, err } = useFetch(path);
     
     let blocks = [], next = null, previous = null;
 
     if(res){
       blocks = res.results;
-      next = res.next;
       previous = res.previous;
+      if(previous){
+        previous = previous.slice(previous.indexOf(basePath));
+      }
+      next = res.next;
+      if(next){
+        next = next.slice(next.indexOf(basePath));
+      }
+    }
+
+    function previousPage(){
+      setPath(previous);
+    }
+
+    function nextPage(){
+      setPath(next);
     }
 
     return (
@@ -19,6 +38,18 @@ export default function BlockList() {
 
         { err && <div>{ err }</div> }
         { pnd && <div>Loading...</div> }
+        {
+          previous ?
+          (<button onClick={previousPage}>previous</button>)
+          :
+          (<button disabled></button>)
+        }
+        {
+          next ?
+          (<button onClick={nextPage}>next</button>)
+          :
+          (<button disabled></button>)
+        }
         { blocks.map(block => (<BlockPreview key={block.id} block={block} />)) }
 
       </div>
