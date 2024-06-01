@@ -1,4 +1,4 @@
-import { Link, Route, Routes, Navigate } from "react-router-dom";
+import { Link, Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import useFetch  from "../../utils/useFetch";
 import AdminBlock from "./pages/Blocks/AdminBlock";
@@ -6,11 +6,12 @@ import AdminBlock from "./pages/Blocks/AdminBlock";
 
 export default function Admin() {
   
+  const prevLoc = useLocation();
   const [cookies,] = useCookies(['user_token']);
   const{ pnd, res, err } = useFetch({path: 'validate-token/'});
 
   if(!cookies.user_token || err){
-    return (<Navigate to="/login/" replace={true} />);
+    return (<Navigate to={`/login?prev=${prevLoc.pathname}`} replace={true}/>);
   }
 
   return pnd?
