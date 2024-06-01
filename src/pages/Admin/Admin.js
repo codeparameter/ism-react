@@ -7,7 +7,7 @@ import AdminBlock from "./pages/Blocks/AdminBlock";
 export default function Admin() {
   
   const [cookies,] = useCookies(['user_token']);
-  const{ pnd, res, err } = useFetch('validate-token/');
+  const{ pnd, res, err } = useFetch({path: 'validate-token/'});
 
   if(!cookies.user_token || err){
     return (<Navigate to="/login/" replace={true} />);
