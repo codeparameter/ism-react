@@ -7,5 +7,5 @@ export default function cookie(key){
     }
     const valueIndex = keyIndex + key.length;
     const nextKeyIndex = cookies.indexOf(';', valueIndex);
-    return cookies.slice(valueIndex, nextKeyIndex);
+    return nextKeyIndex == -1 ? cookies.slice(valueIndex) : cookies.slice(valueIndex, nextKeyIndex);
 }
