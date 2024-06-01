@@ -2,7 +2,7 @@
 // import { GlobalContext } from "../../../../App";
 import { useCookies } from 'react-cookie';
 import { redirect } from "react-router-dom";
-import useFetch  from "../../../../components/useFetch";
+import useFetch  from "../../../../utils/useFetch";
 
 export default function BlockCerate() {
   

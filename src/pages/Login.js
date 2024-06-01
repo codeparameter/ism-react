@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 // import { GlobalContext } from "../App";
 import { useCookies } from 'react-cookie';
-import { useFetchStates, fetchPost } from "../components/useFetch";
+import { useFetchStates, fetchPost } from "../utils/useFetch";
 
 export default function Login() {
 

@@ -1,18 +1,18 @@
 import {useParams}  from "react-router-dom";
-import useFetch  from "../../components/useFetch";
+import useFetch  from "../../utils/useFetch";
 
 export default function BlockDetails() {
 
     const {id} = useParams();
 
-    const { data: block, isPending, error } = useFetch(`blocks/${id}/`);
+    const { pnd, res: block, err } = useFetch({path: `blocks/${id}/`});
 
     return (
       <div className="">
         <h2>block details</h2>
 
-        { error && <div>{ error }</div> }
-        { isPending && <div>Loading...</div> }
+        { err && <div>{ err }</div> }
+        { pnd && <div>Loading...</div> }
         { block && (
             <>
             <h2>{ block.material_name }</h2>

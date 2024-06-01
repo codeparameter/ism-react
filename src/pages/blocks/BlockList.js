@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useFetch  from "../../components/useFetch";
+import useFetch  from "../../utils/useFetch";
 import BlockPreview from "../../components/pages/BlockList/BlockPreview";
 
 export default function BlockList() {
@@ -8,7 +8,7 @@ export default function BlockList() {
 
     const [path, setPath] = useState(basePath);
 
-    const{ pnd, res, err } = useFetch(path);
+    const{ pnd, res, err } = useFetch({path});
     
     let blocks = [], next = null, previous = null;
 

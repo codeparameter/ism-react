@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useCookies } from 'react-cookie';
 
 export function useFetchStates(isPnd=false){
   const [pnd, setPnd] = useState(isPnd);
@@ -8,7 +9,28 @@ export function useFetchStates(isPnd=false){
   return { pnd, setPnd, res, setRes, err, setErr };
 }
 
-export function Fetch({setPnd, setRes, setErr, path, options={}}){
+export function Fetch({
+      setPnd, setRes, setErr,
+      path, method='GET', headers={}, body=null
+    }){
+
+  // const [cookies,] = useCookies(['user_token']);
+  
+  let options = {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        // "Authorization": `Token ${cookies.user_token}`,
+        ...headers
+      },
+  };
+
+  if (body){
+    options = {
+      ...options,
+      body: JSON.stringify(body)
+    };
+  }
 
   fetch(process.env.REACT_APP_BASE_API + path, options)
     .then(res => {
@@ -29,12 +51,14 @@ export function Fetch({setPnd, setRes, setErr, path, options={}}){
     });
 }
 
-export default function useFetch(path, options={}) {
+export default function useFetch({
+      path, method='GET', headers={}, body=null
+    }) {
   
   const { pnd, setPnd, res, setRes, err, setErr } = useFetchStates(true);
 
   useEffect(() => {
-    Fetch({setPnd, setRes, setErr, path, options});
+    Fetch({setPnd, setRes, setErr, path, method, headers, body});
   }, [path]);
 
   return { pnd, res, err };
@@ -42,19 +66,10 @@ export default function useFetch(path, options={}) {
 
 export function fetchPost({
           setPnd, setRes, setErr,
-          path, method='POST', headers={}, body={}
+          path, method='POST', headers={}, body=null
           }) {
 
   setPnd(true);
   
-  const options = {
-      method,
-      headers: {
-        "Content-Type": "application/json",
-        ...headers
-      },
-      body: JSON.stringify(body)
-  };
-  
-  Fetch({setPnd, setRes, setErr, path, options});
+  Fetch({setPnd, setRes, setErr, path, method, headers, body});
 }
