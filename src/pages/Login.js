@@ -46,9 +46,9 @@ export default function Login() {
 
         
         <form id="login-form" onSubmit={submitLogin}>
-            <input type="text" placeholder="Your Username" required
+            <input type="text" name="username" placeholder="Your Username" required
               value={userName} onChange={(e)=>setUserName(e.target.value)} />
-            <input type="password" placeholder="Your Password" required
+            <input type="password" name="password" placeholder="Your Password" required
               value={pass} onChange={(e)=>setPass(e.target.value)} />
             <input type="submit" value="Login" />
         </form>
