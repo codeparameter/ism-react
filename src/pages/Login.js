@@ -25,7 +25,6 @@ export default function Login() {
       if(res && !err){
         // setToken(data.token);
         setCookie('user_token', res.token);
-        return (<Navigate to={`${prev}/`}  replace={true}/>);
       }
     }, [res, err, pnd]);
 
@@ -38,7 +37,10 @@ export default function Login() {
       }});
     }
 
-    return (
+    return res && !err?
+     (<Navigate to={`${prev}`}  replace={true}/>)
+     :
+    (
       <div className="">
         Login
         { err && <div>{ err }</div> }
