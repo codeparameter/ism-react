@@ -1,12 +1,20 @@
-import { useContext } from "react";
-import { GlobalContext } from "../../../../App";
+// import { useContext } from "react";
+// import { GlobalContext } from "../../../../App";
+import { useCookies } from 'react-cookie';
+import { redirect } from "react-router-dom";
 import useFetch  from "../../../../components/useFetch";
 
 export default function BlockCerate() {
   
-  const {token} = useContext(GlobalContext);
-  console.log(token);
-  // const token = '49b87381d32efebb7876f230942e9c92a432fdb8';
+  // const {token} = useContext(GlobalContext);
+
+  const [cookies,] = useCookies(['user_token']);
+
+  // const token = cookies.user_token;
+
+  // if(!token){
+  //   return redirect("/login/");
+  // }
 
   const block = {
     "city": 1,
@@ -19,11 +27,11 @@ export default function BlockCerate() {
     "not_available": false
 };
 
-  const { data, isPending, error } = useFetch('blocks/', {
+  const { pnd, res, err } = useFetch('blocks/', {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
-        "Authorization": `Token ${token}`,
+        "Authorization": `Token ${cookies.user_token}`,
     },
     body: JSON.stringify(block)
   }); 
@@ -31,10 +39,9 @@ export default function BlockCerate() {
   return (
     <div className="">
       <h2>block create</h2>
-      {token ? token : "no token"}
 
-      { error && <div>{ error }</div> }
-      { isPending && <div>Loading...</div> }
+      { err && <div>{ err }</div> }
+      { pnd && <div>Loading...</div> }
       {/* { block && (
           <>
           <h2>{ block.material_name }</h2>

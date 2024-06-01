@@ -3,16 +3,22 @@ import BlockPreview from "../../components/pages/BlockList/BlockPreview";
 
 export default function BlockList() {
 
-    const { data, isPending, error } = useFetch('blocks/');
+    const{ pnd, res, err } = useFetch('blocks/');
     
-    const blocks = data ? data.results : []
+    let blocks = [], next = null, previous = null;
+
+    if(res){
+      blocks = res.results;
+      next = res.next;
+      previous = res.previous;
+    }
 
     return (
       <div className="">
         <h2>block list</h2>
 
-        { error && <div>{ error }</div> }
-        { isPending && <div>Loading...</div> }
+        { err && <div>{ err }</div> }
+        { pnd && <div>Loading...</div> }
         { blocks.map(block => (<BlockPreview key={block.id} block={block} />)) }
 
       </div>
