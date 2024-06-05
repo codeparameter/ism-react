@@ -2,6 +2,8 @@
 import {React, useState} from "react";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
+import LinkToLogin from "./components/LinkToLogin";
+
 import Admin from "./pages/Admin/Admin";
 import BlockDetails from "./pages/blocks/BlockDetails";
 import BlockList from './pages/blocks/BlockList';
@@ -25,7 +27,7 @@ function App() {
           <nav>
             <Link to="/">Home</Link> <br/>
             <Link to="/blocks/">Blocks</Link><br/>
-            <Link to="/login/">login</Link><br />
+            <LinkToLogin/>
             <Link to="/admin/">admin</Link>
           </nav>
           <Routes>
