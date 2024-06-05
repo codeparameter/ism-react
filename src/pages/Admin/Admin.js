@@ -16,8 +16,6 @@ export default function Admin() {
   //   return (<Navigate to={`/login?prev=${prevLoc.pathname}`} replace={true}/>);
   // }
 
-  console.log(userToken);
-
   if(!userToken || err){
     return (<Navigate to={`/login?prev=${prevLoc.pathname}`} replace={true}/>);
   }
