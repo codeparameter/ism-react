@@ -1,11 +1,15 @@
 export default function cookie(key){
     key += '=';
     const cookies = document.cookie;
-    const keyIndex = cookies.indexOf(key);
+    const pattern = String.raw`(^|\s)${key}`;
+    const keyIndex = cookies.search(pattern);
     if(keyIndex == -1){
         return null;
     }
     const valueIndex = keyIndex + key.length;
     const nextKeyIndex = cookies.indexOf(';', valueIndex);
-    return nextKeyIndex == -1 ? cookies.slice(valueIndex) : cookies.slice(valueIndex, nextKeyIndex);
+    const result = nextKeyIndex == -1 ? 
+            cookies.slice(valueIndex) : cookies.slice(valueIndex, nextKeyIndex);
+    return result.charAt(0) == '=' ?
+            result.slice(1) : result;
 }
