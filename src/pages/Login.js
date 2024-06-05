@@ -38,7 +38,12 @@ export default function Login() {
     }
 
     return res && !err?
-     (<Navigate to={`${prev}`}  replace={true}/>)
+    (
+      
+    )
+
+
+    (<Navigate to={`${prev}`}  replace={true}/>)
      :
     (
       <div className="">
