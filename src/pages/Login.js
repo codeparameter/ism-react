@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 // import { GlobalContext } from "../App";
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
+import useLocalStorage from "../utils/useLocalStorage";
 import { useFetchStates, fetchPost } from "../utils/useFetch";
 
 export default function Login() {
@@ -12,7 +13,9 @@ export default function Login() {
 
     // const {token, setToken} = useContext(GlobalContext);
 
-    const [, setCookie, ] = useCookies(['user_token']);
+    // const [, setCookie, ] = useCookies(['user_token']);
+
+    const [, setUserToken] = useLocalStorage('user_token');
 
     const [userName, setUserName] = useState('');
     const [pass, setPass] = useState('');
@@ -23,8 +26,9 @@ export default function Login() {
     useEffect(()=>{
       
       if(res && !err){
-        // setToken(data.token);
-        setCookie('user_token', res.token);
+        // setToken(res.token);
+        // setCookie('user_token', res.token);
+        setUserToken(res.token);
       }
     }, [res, err, pnd]);
 

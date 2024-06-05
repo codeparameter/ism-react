@@ -27,7 +27,7 @@ function App() {
           <nav>
             <Link to="/">Home</Link> <br/>
             <Link to="/blocks/">Blocks</Link><br/>
-            <LinkToLogin/>
+            <LinkToLogin/> <br/>
             <Link to="/admin/">admin</Link>
           </nav>
           <Routes>
