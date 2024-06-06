@@ -25,6 +25,14 @@ export default function usePagination(basePath) {
     function pagBut(url){
       return () => {setPath(url);};
     }
+    
+    function PBut({bUrl, txt='', disTxt=''}){
+        return bUrl ?
+            (<button onClick={pagBut(bUrl)}>{txt}</button>)
+            :
+            (<button disabled>{disTxt}</button>)
+            ;
+    }
 
-    return { pnd, res, err, list, next, previous, pagBut};
+    return { pnd, res, err, list, next, previous, PBut};
 }

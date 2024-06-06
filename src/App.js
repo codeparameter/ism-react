@@ -1,49 +1,51 @@
-// import {React, useState, createContext} from "react";
-import {React, useState} from "react";
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import {
+  createBrowserRouter, 
+  createRoutesFromElements,
+  Route, 
+  RouterProvider
+} from 'react-router-dom';
 
-import LinkToLogin from "./components/LinkToLogin";
+// pages
 
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login';
 import Admin from "./pages/Admin/Admin";
 import BlockDetails from "./pages/blocks/BlockDetails";
 import BlockList from './pages/blocks/BlockList';
-import Home from './pages/Home';
-import Login from './pages/Login';
+import AdminBlock from './pages/Admin/pages/Blocks/AdminBlock';
+import BlockCerate from './pages/Admin/pages/Blocks/BlockCreate';
 
-// export const GlobalContext = createContext(null);
+// layouts
+import RootLayout from './layouts/RootLayout'
 
-function App() {
 
-  // const [token, setToken] = useState("");
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      {/* <Route path="about" element={<About />} />
+      <Route path="help" element={<HelpLayout />}>
+        <Route path="faq" element={<Faq />} />
+        <Route path="contact" element={<Contact/>} action={contactAction} />
+      </Route> */}
+      <Route path="login" element={<Login/>} />
+      <Route path="admin" element={<Admin/>}>
+        <Route path="blocks" element={<AdminBlock/>}>
+          <Route path="create" element={<BlockCerate/>} />
+        </Route>
+      </Route>
+      <Route path="blocks">
+        <Route index element={<BlockList/>} />
+        <Route path=":id" element={<BlockDetails/>} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+)
 
+export default function App() {
   return (
-    <div className="app">
-      <header></header>
-      {/* <main></main>
-      <aside></aside> */}
-      
-      {/* <GlobalContext.Provider value={{token, setToken}} > */}
-        <BrowserRouter>
-          <nav>
-            <Link to="/">Home</Link> <br/>
-            <Link to="/blocks/">Blocks</Link><br/>
-            <LinkToLogin/> <br/>
-            <Link to="/admin/">admin</Link>
-          </nav>
-          <Routes>
-            
-            <Route path="/" element={<Home/>} />
-            <Route path="/admin/*" element={<Admin/>} />
-            <Route path="/login/" element={<Login/>} />
-            <Route path="/blocks/" element={<BlockList/>} />
-            <Route path="/blocks/:id/" element={<BlockDetails/>} />
-          </Routes>
-        </BrowserRouter>
-      {/* </GlobalContext.Provider> */}
-
-      <footer></footer>
-    </div>
+    <RouterProvider router={router} />
   );
 }
-
-export default App;

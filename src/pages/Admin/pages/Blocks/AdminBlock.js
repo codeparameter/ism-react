@@ -1,5 +1,4 @@
-import { Route, Routes, Link } from "react-router-dom";
-import BlockCerate from "./BlockCreate";
+import { Outlet, NavLink } from "react-router-dom";
 
 
 export default function AdminBlock() {
@@ -8,14 +7,12 @@ export default function AdminBlock() {
       <div className="">
         admin blocks... <br />
 
-        <Link to="create/">
+        <NavLink to="create/">
           create
-        </Link>
+        </NavLink>
 
         
-        <Routes>
-            <Route path="create/" element={<BlockCerate/>} />
-        </Routes>
+        <Outlet/>
       </div>
     );
 }

@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { useCookies } from 'react-cookie';
-// import cookie  from './cookie';
 import {LocalStorage} from "./useLocalStorage";
 
 export function useFetchStates(isPnd=false){
@@ -16,14 +14,10 @@ export function Fetch({
       path, method='GET', headers={}, body=null
     }){
 
-  // const [cookies,] = useCookies(['user_token']);
-  
-  // const user_token = cookie('user_token');
+  const userToken = LocalStorage('user_token');
 
-  const user_token = LocalStorage('user_token');
-
-  if (user_token){
-    headers = {...headers, "Authorization": `Token ${user_token}`};
+  if (userToken){
+    headers = {...headers, "Authorization": `Token ${userToken}`};
   }
 
   let options = {

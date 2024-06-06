@@ -1,40 +1,20 @@
-// import { useContext } from "react";
-// import { GlobalContext } from "../../../../App";
-import { useCookies } from 'react-cookie';
-import { redirect } from "react-router-dom";
-import useFetch  from "../../../../utils/useFetch";
+import { useState, useEffect } from "react";
+import {fetchPost, useFetchStates}  from "../../../../utils/useFetch";
 
 export default function BlockCerate() {
-  
-  // const {token} = useContext(GlobalContext);
 
-  const [cookies,] = useCookies(['user_token']);
+  const [material, setMaterial] = useState('');
+  const [city, setCity] = useState('');
+  const [schema, setSchema] = useState('');
+  const [quality, setQuality] = useState('');
+  const [length, setLength] = useState('');
+  const [height, setHeight] = useState('');
+  const [width, setWidth] = useState('');
+  const [notAvailable, setNotAvailable] = useState(false);
 
-  // const token = cookies.user_token;
+  const { pnd, setPnd, res, setRes, err, setErr } = useFetchStates();
 
-  // if(!token){
-  //   return redirect("/login/");
-  // }
-
-  const block = {
-    "city": 1,
-    "material": 1,
-    "schema": 1,
-    "quality": 1,
-    "length": 220,
-    "height": 180,
-    "width": 111,
-    "not_available": false
-};
-
-  const { pnd, res, err } = useFetch('blocks/', {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Token ${cookies.user_token}`,
-    },
-    body: JSON.stringify(block)
-  }); 
+  // fetchPost({setPnd, setRes, setErr, path: 'blocks/', body: block}); 
 
   return (
     <div className="">

@@ -1,5 +1,5 @@
 import ListPage from "../../components/ListPage";
-import BlockPreview from "../../components/pages/BlockList/BlockPreview";
+import BlockPreview from "./components/BlockPreview";
 
 export default function BlockList() {
 
