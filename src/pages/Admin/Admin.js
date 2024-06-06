@@ -5,12 +5,12 @@ import useFetch  from "../../utils/useFetch";
 
 export default function Admin() {
   
-  const prevLoc = useLocation();
+  const location = useLocation();
   const [userToken,] = useLocalStorage('user_token');
   const{ pnd, res, err } = useFetch({path: 'validate-token/'});
 
   if(!userToken || err){
-    return (<Navigate to={`/login?prev=${prevLoc.pathname}`} replace={true}/>);
+    return (<Navigate to={`/login?prev=${location.pathname}`}/>);
   }
 
   return pnd?
