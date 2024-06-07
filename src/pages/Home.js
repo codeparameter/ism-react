@@ -1132,27 +1132,27 @@ export default function Home() {
           alert('f');
         })
         }</script> */}
-        <script type="text/jsx" src="assets/js/vendor/jquery-3.6.0.min.js"/>
-        <script type="text/jsx" src="assets/js/bootstrap.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.magnific-popup.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.odometer.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.appear.js"/>
-        <script type="text/jsx" src="assets/js/gsap.js"/>
-        <script type="text/jsx" src="assets/js/ScrollTrigger.js"/>
-        <script type="text/jsx" src="assets/js/SplitText.js"/>
-        <script type="text/jsx" src="assets/js/gsap-animation.js"/>
-        <script type="text/jsx" src="assets/js/jarallax.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.parallaxScroll.min.js"/>
-        <script type="text/jsx" src="assets/js/particles.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.easypiechart.min.js"/>
-        <script type="text/jsx" src="assets/js/jquery.inview.min.js"/>
-        <script type="text/jsx" src="assets/js/swiper-bundle.min.js"/>
-        <script type="text/jsx" src="assets/js/slick.min.js"/>
-        <script type="text/jsx" src="assets/js/ajax-form.js"/>
-        <script type="text/jsx" src="assets/js/aos.js"/>
-        <script type="text/jsx" src="assets/js/wow.min.js"/>
-        <script type="text/jsx" src="assets/js/main.js"/>
-        <script type="text/jsx" src="assets/js/final.js"/>
+        {/* <script type="text/javascript" src="assets/js/vendor/jquery-3.6.0.min.js"/>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.odometer.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.appear.js"/>
+        <script type="text/javascript" src="assets/js/gsap.js"/>
+        <script type="text/javascript" src="assets/js/ScrollTrigger.js"/>
+        <script type="text/javascript" src="assets/js/SplitText.js"/>
+        <script type="text/javascript" src="assets/js/gsap-animation.js"/>
+        <script type="text/javascript" src="assets/js/jarallax.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.parallaxScroll.min.js"/>
+        <script type="text/javascript" src="assets/js/particles.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.easypiechart.min.js"/>
+        <script type="text/javascript" src="assets/js/jquery.inview.min.js"/>
+        <script type="text/javascript" src="assets/js/swiper-bundle.min.js"/>
+        <script type="text/javascript" src="assets/js/slick.min.js"/>
+        <script type="text/javascript" src="assets/js/ajax-form.js"/>
+        <script type="text/javascript" src="assets/js/aos.js"/>
+        <script type="text/javascript" src="assets/js/wow.min.js"/>
+        <script type="text/javascript" src="assets/js/main.js"/>
+        <script type="text/javascript" src="assets/js/final.js"/> */}
 
       </div>
     );
