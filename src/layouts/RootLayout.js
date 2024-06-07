@@ -5,7 +5,7 @@ export default function RootLayout() {
   return (
     <div className="root-layout">
       {/* <ScrollRestoration /> */}
-      <header>
+      <header style={{position: 'fixed', top: '0', width: '100%', 'z-index': '999999', background: 'white'}}>
         <nav>
           <h1>ism router</h1>
           <NavLink to="/">Home</NavLink>
