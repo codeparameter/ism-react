@@ -35,13 +35,13 @@ export default function useLocalStorage(key, defaultValue){
 	}
 
 	window.addEventListener('storage', ()=>{
-		setLocalStorageStateValue(LocalStorage(key));
+		setLocalStorageStateValue(getLocalStorage(key));
 	});
 
 	return [localStorageValue, setLocalStorageStateValue];
 }
 
-export function LocalStorage(key){
+export function getLocalStorage(key){
     try {
         const value = localStorage.getItem(key);
         if (value) {
@@ -50,4 +50,8 @@ export function LocalStorage(key){
     } catch (error) {
         return null;
     }
+}
+
+export function setLocalStorage(key, value){
+    localStorage.setItem(key, JSON.stringify(value));
 }
