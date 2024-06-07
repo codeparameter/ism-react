@@ -1,7 +1,9 @@
+import usePageTitle from "../components/usePageTitle";
+
 export default function Home() {
+  usePageTitle("دیجی معدن");
     return (
       <div className="">
-        
 
         {/* <!-- preloader --> */}
         <div id="preloader">
