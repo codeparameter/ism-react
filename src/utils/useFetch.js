@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {LocalStorage} from "./useLocalStorage";
+import {getLocalStorage} from "./useLocalStorage";
 
 export function useFetchStates(isPnd=false){
   const [pnd, setPnd] = useState(isPnd);
@@ -14,7 +14,7 @@ export function Fetch({
       path, method='GET', headers={}, body=null
     }){
 
-  const userToken = LocalStorage('user_token');
+  const userToken = getLocalStorage('user_token');
 
   if (userToken){
     headers = {...headers, "Authorization": `Token ${userToken}`};
