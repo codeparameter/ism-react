@@ -8,12 +8,102 @@ function preloader() {
 	$('#preloader').delay(0).fadeOut();
 };
 
+
+/*=============================================
+	=    		 Main Slider		      =
+=============================================*/
+function mainSlider() {
+	var BasicSlider = $('.slider-active');
+	BasicSlider.on('init', function (e, slick) {
+		var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
+		doAnimations($firstAnimatingElements);
+	});
+	BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+		var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+		doAnimations($animatingElements);
+	});
+	BasicSlider.slick({
+		autoplay: false,
+		autoplaySpeed: 10000,
+		dots: false,
+		fade: true,
+		arrows: false,
+		responsive: [
+			{ breakpoint: 767, settings: { dots: false, arrows: false } }
+		]
+	});
+
+	function doAnimations(elements) {
+		var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		elements.each(function () {
+			var $this = $(this);
+			var $animationDelay = $this.data('delay');
+			var $animationType = 'animated ' + $this.data('animation');
+			$this.css({
+				'animation-delay': $animationDelay,
+				'-webkit-animation-delay': $animationDelay
+			});
+			$this.addClass($animationType).one(animationEndEvents, function () {
+				$this.removeClass($animationType);
+			});
+		});
+	}
+}
+
+
+/*=============================================
+	=          easyPieChart Active          =
+=============================================*/
+function easyPieChart() {
+	$('.circle-item').on('inview', function (event, isInView) {
+		if (isInView) {
+			$('.chart').easyPieChart({
+				scaleLength: 0,
+				lineWidth: 10,
+				trackWidth: 10,
+				size: 160,
+				rotate: 360,
+				animate: 3000,
+				trackColor: '#2A3E66',
+				barColor: '#0055FF',
+			});
+		}
+	});
+}
+
+/*=============================================
+	=    		 Wow Active  	         =
+=============================================*/
+function wowAnimation() {
+	var wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: false,
+		live: true
+	});
+	wow.init();
+}
+
+/*=============================================
+	=           Aos Active       =
+=============================================*/
+function aosAnimation() {
+	AOS.init({
+		duration: 1000,
+		mirror: true,
+		once: true,
+		disable: 'mobile',
+	});
+}
+
 $(window).on('load', function () {
 	preloader();
 	mainSlider();
 	wowAnimation();
 	aosAnimation();
 	tg_title_animation();
+	easyPieChart();
 
 	
 	/*=============================================
@@ -97,48 +187,6 @@ $(window).on('load', function () {
 	$("[data-background]").each(function () {
 		$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
 	})
-
-
-	/*=============================================
-		=    		 Main Slider		      =
-	=============================================*/
-	function mainSlider() {
-		var BasicSlider = $('.slider-active');
-		BasicSlider.on('init', function (e, slick) {
-			var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
-			doAnimations($firstAnimatingElements);
-		});
-		BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
-			var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-			doAnimations($animatingElements);
-		});
-		BasicSlider.slick({
-			autoplay: false,
-			autoplaySpeed: 10000,
-			dots: false,
-			fade: true,
-			arrows: false,
-			responsive: [
-				{ breakpoint: 767, settings: { dots: false, arrows: false } }
-			]
-		});
-
-		function doAnimations(elements) {
-			var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-			elements.each(function () {
-				var $this = $(this);
-				var $animationDelay = $this.data('delay');
-				var $animationType = 'animated ' + $this.data('animation');
-				$this.css({
-					'animation-delay': $animationDelay,
-					'-webkit-animation-delay': $animationDelay
-				});
-				$this.addClass($animationType).one(animationEndEvents, function () {
-					$this.removeClass($animationType);
-				});
-			});
-		}
-	}
 
 
 	/*=============================================
@@ -844,28 +892,6 @@ $(window).on('load', function () {
 	}
 
 
-	/*=============================================
-		=          easyPieChart Active          =
-	=============================================*/
-	function easyPieChart() {
-		$('.circle-item').on('inview', function (event, isInView) {
-			if (isInView) {
-				$('.chart').easyPieChart({
-					scaleLength: 0,
-					lineWidth: 10,
-					trackWidth: 10,
-					size: 160,
-					rotate: 360,
-					animate: 3000,
-					trackColor: '#2A3E66',
-					barColor: '#0055FF',
-				});
-			}
-		});
-	}
-	easyPieChart();
-
-
 	/*-------------------------------------
 	Intersection Observer
 	-------------------------------------*/
@@ -926,34 +952,6 @@ $(window).on('load', function () {
 		type: 'iframe'
 	});
 
-
-	/*=============================================
-		=    		 Wow Active  	         =
-	=============================================*/
-	function wowAnimation() {
-		var wow = new WOW({
-			boxClass: 'wow',
-			animateClass: 'animated',
-			offset: 0,
-			mobile: false,
-			live: true
-		});
-		wow.init();
-	}
-
-
-	/*=============================================
-		=           Aos Active       =
-	=============================================*/
-	function aosAnimation() {
-		AOS.init({
-			duration: 1000,
-			mirror: true,
-			once: true,
-			disable: 'mobile',
-		});
-	}
-	
 });
 
 
