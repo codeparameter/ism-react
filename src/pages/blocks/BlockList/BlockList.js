@@ -1,5 +1,5 @@
 import usePageTitle from "../../../components/usePageTitle";
-import usePagination from "../../../utils/pagination";
+import usePagination from "../../../utils/usePagination";
 import BlockPreviewCard from "./components/BlockPreviewCard";
 
 export default function BlockList(){
@@ -12,9 +12,8 @@ export default function BlockList(){
     return (
       <>
 
-        <h2>list</h2>
-
         
+        { err && <div>{ err }</div> }
 
 
         {/*<!-- main-area -->*/}
@@ -52,7 +51,8 @@ export default function BlockList(){
                             <div className="col-71">
                                 <div className="blog-post-wrap">
                                     <div className="row">
-                                        {blocks.map(block => <BlockPreviewCard block={block} key={block.id}/>)}            
+                                        { pnd && [...Array(10).keys()].map(idx => <BlockPreviewCard key={idx}/>)}
+                                        { blocks.map(block => <BlockPreviewCard block={block} key={block.id}/>)}            
                                     </div>
                                     <div className="pagination-wrap mt-30">
                                         <nav aria-label="Page navigation example">
@@ -153,9 +153,6 @@ export default function BlockList(){
 
         </main>
 
-
-        { err && <div>{ err }</div> }
-        { pnd && <div>Loading...</div> }
         <PBut bUrl={previous} txt='previous' />
         <PBut bUrl={next} txt='next' />
 

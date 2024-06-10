@@ -1,4 +1,4 @@
-import usePagination from "../utils/pagination";
+import usePagination from "../utils/usePagination";
 
 export default function ListPage({basePath, itemViewFn}){
 

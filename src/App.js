@@ -11,10 +11,10 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Admin from "./pages/Admin/Admin";
-import BlockDetails from "./pages/blocks/BlockDetails";
-import BlockList from './pages/blocks/BlockList/BlockList';
 import AdminBlock from './pages/Admin/pages/Blocks/AdminBlock';
 import BlockCerate from './pages/Admin/pages/Blocks/BlockCreate';
+import BlockList from './pages/blocks/BlockList/BlockList';
+import BlockDetails from "./pages/blocks/BlockDetails/BlockDetails";
 
 // layouts
 import RootLayout from './layouts/RootLayout/RootLayout'
