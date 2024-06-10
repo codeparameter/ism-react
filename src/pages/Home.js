@@ -2,6 +2,7 @@ import usePageTitle from "../components/usePageTitle";
 
 export default function Home() {
   usePageTitle("دیجی معدن");
+  let homeJs;
     return (
       <div className="">
 
@@ -1153,8 +1154,18 @@ export default function Home() {
         <script type="text/javascript" src="assets/js/ajax-form.js"/>
         <script type="text/javascript" src="assets/js/aos.js"/>
         <script type="text/javascript" src="assets/js/wow.min.js"/>
-        <script type="text/javascript" src="assets/js/main.js"/>
-        <script type="text/javascript" src="assets/js/final.js"/> */}
+        <script type="text/javascript" src="assets/js/main.js"/> */}
+
+        <script type="text/javascript">            
+            {
+            homeJs = () =>{
+                console.log('test');
+            }
+            }
+            {
+            homeJs()
+            }
+        </script> 
 
       </div>
     );

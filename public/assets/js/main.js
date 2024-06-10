@@ -1,3 +1,6 @@
+
+
+
 (function ($) {
 	"use strict";
 
@@ -97,7 +100,8 @@ function aosAnimation() {
 	});
 }
 
-function onUrlChange () {
+function onUrlMain () {
+	console.log('aa');
 	preloader();
 	mainSlider();
 	wowAnimation();
@@ -971,28 +975,8 @@ $(window).on('scroll', function () {
 	}
 });
 
-var oldHref = document.location.href;
 
-$(window).on('load', function () {
-	
-	onUrlChange();
-    
-	var bodyList = document.querySelector("body")
-
-    var observer = new MutationObserver(function(mutations) {
-        if (oldHref != document.location.href) {
-            oldHref = document.location.href;
-            onUrlChange();
-        }
-    });
-    
-    var config = {
-        childList: true,
-        subtree: true
-    };
-    
-    observer.observe(bodyList, config);
-});
+addOnUrlFn(onUrlMain);
 
 
 })(jQuery);
