@@ -12,12 +12,12 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Admin from "./pages/Admin/Admin";
 import BlockDetails from "./pages/blocks/BlockDetails";
-import BlockList from './pages/blocks/BlockList';
+import BlockList from './pages/blocks/BlockList/BlockList';
 import AdminBlock from './pages/Admin/pages/Blocks/AdminBlock';
 import BlockCerate from './pages/Admin/pages/Blocks/BlockCreate';
 
 // layouts
-import RootLayout from './layouts/RootLayout'
+import RootLayout from './layouts/RootLayout/RootLayout'
 
 
 const router = createBrowserRouter(
