@@ -14,6 +14,9 @@ export function Fetch({
       path, method='GET', headers={}, body=null
     }){
 
+    
+  setPnd(true);
+
   const userToken = getLocalStorage('user_token');
 
   if (userToken){
@@ -70,9 +73,7 @@ export default function useFetch({
 export function fetchPost({
           setPnd, setRes, setErr,
           path, method='POST', headers={}, body=null
-          }) {
-
-  setPnd(true);
+          }) {  
   
   Fetch({setPnd, setRes, setErr, path, method, headers, body});
 }
