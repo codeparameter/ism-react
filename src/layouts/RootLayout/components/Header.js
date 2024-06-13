@@ -64,7 +64,7 @@ export default function Header() {
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="menu-item-has-children"><a href="#">درباره ما</a>
+                                        <li className="menu-item-has-children"><NavLink to="about">درباره ما</NavLink>
                                             <ul className="sub-menu">
                                                 <li><a href="about.html">درباره امور مالی</a></li>
                                                 <li><a href="about-2.html">درباره مشاوره</a></li>
@@ -104,7 +104,7 @@ export default function Header() {
                                                 <li><a href="blog-details.html">جرئیات وبلاگ</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">تماس با ما</a></li>
+                                        <li><NavLink to="contact">تماس با ما</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="header-action header-action-six d-none d-md-block">

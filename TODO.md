@@ -1,7 +1,5 @@
 BlockDetails
 BlockList buttons
-about us
-contact us
 
 :
 
