@@ -3582,8 +3582,11 @@
 
 }
 
-/* from 0 px width */
+/* ism update */
 
-.breadcrumb-bg {
-    padding: 120px 0 70px;
+@media only screen and (max-width: 575px){
+}
+
+.breadcrumb-area.breadcrumb-bg{
+    margin-top: 46px;
 }
