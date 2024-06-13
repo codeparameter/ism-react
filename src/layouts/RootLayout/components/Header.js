@@ -38,7 +38,7 @@ export default function Header() {
                         <div className="menu-wrap">
                             <nav className="menu-nav">
                                 <div className="logo">
-                                    <NavLink to="/"><img src="assets/img/logo/w_logo02.png" alt="Logo"/></NavLink>
+                                    <NavLink to="/"><img src="/assets/img/logo/w_logo02.png" alt="Logo"/></NavLink>
                                 </div>
                                 <div className="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul className="navigation">
@@ -122,7 +122,7 @@ export default function Header() {
                             <nav className="menu-box">
                                 <div className="close-btn"><i className="fas fa-times"></i></div>
                                 <div className="nav-logo">
-                                    <NavLink to="/"><img src="assets/img/logo/logo.png" alt="Logo"/></NavLink>
+                                    <NavLink to="/"><img src="/assets/img/logo/logo.png" alt="Logo"/></NavLink>
                                 </div>
                                 <div className="mobile-search">
                                     <form action="#">
@@ -181,7 +181,7 @@ export default function Header() {
                 <button><i className="far fa-window-close"></i></button>
             </div>
             <div className="logo-side mb-30">
-                <NavLink to="/"><img src="assets/img/logo/logo.png" alt="Logo"/></NavLink>
+                <NavLink to="/"><img src="/assets/img/logo/logo.png" alt="Logo"/></NavLink>
             </div>
             <div className="side-info mb-30">
                 <div className="contact-list mb-30">
@@ -200,12 +200,12 @@ export default function Header() {
                 </div>
             </div>
             <ul className="side-instagram list-wrap">
-                <li><a href="#"><img src="assets/img/images/sb_insta01.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="assets/img/images/sb_insta02.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="assets/img/images/sb_insta03.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="assets/img/images/sb_insta04.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="assets/img/images/sb_insta05.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="assets/img/images/sb_insta06.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta01.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta02.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta03.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta04.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta05.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="/assets/img/images/sb_insta06.jpg" alt=""/></a></li>
             </ul>
             <div className="social-icon-right mt-30">
                 <a href="#"><i className="fab fa-facebook-f"></i></a>

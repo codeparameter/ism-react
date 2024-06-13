@@ -21,9 +21,9 @@ export default function Home() {
                 </div>
             </div>
             <div className="banner-shape-wrap-nine">
-                <img src="assets/img/banner/h10_hero_shape01.png" alt="shape" data-aos="fade-down-left" data-aos-delay="600"/>
-                <img src="assets/img/banner/h10_hero_shape02.png" alt="shape" data-aos="fade-up-right" data-aos-delay="600"/>
-                <img src="assets/img/banner/h10_hero_shape03.png" alt="shape" data-aos="fade-up-right" data-aos-delay="800"/>
+                <img src="/assets/img/banner/h10_hero_shape01.png" alt="shape" data-aos="fade-down-left" data-aos-delay="600"/>
+                <img src="/assets/img/banner/h10_hero_shape02.png" alt="shape" data-aos="fade-up-right" data-aos-delay="600"/>
+                <img src="/assets/img/banner/h10_hero_shape03.png" alt="shape" data-aos="fade-up-right" data-aos-delay="800"/>
             </div>
         </section>
         {/* <!-- banner-area-end --> */}
@@ -82,9 +82,9 @@ export default function Home() {
                 </div>
             </div>
             <div className="features-shape-seven">
-                <img src="assets/img/images/h10_features_shape01.png" alt="shape" data-aos="fade-up-right" data-aos-delay="400"/>
-                <img src="assets/img/images/h10_features_shape02.png" alt="shape" data-aos="fade-down-left" data-aos-delay="400"/>
-                <img src="assets/img/images/h10_features_shape03.png" alt="shape"/>
+                <img src="/assets/img/images/h10_features_shape01.png" alt="shape" data-aos="fade-up-right" data-aos-delay="400"/>
+                <img src="/assets/img/images/h10_features_shape02.png" alt="shape" data-aos="fade-down-left" data-aos-delay="400"/>
+                <img src="/assets/img/images/h10_features_shape03.png" alt="shape"/>
             </div>
         </section>
         {/* <!-- features-area-end --> */}
@@ -95,10 +95,10 @@ export default function Home() {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6 col-md-9">
                         <div className="about-img-sixteen">
-                            <img src="assets/img/images/h10_about_img01.jpg" alt="img" data-aos="fade-right" data-aos-delay="200"/>
-                            <img src="assets/img/images/h10_about_img02.jpg" alt="img" data-aos="fade-left" data-aos-delay="400"/>
-                            <img src="assets/img/images/h10_about_img03.jpg" alt="img" data-aos="fade-up" data-aos-delay="600"/>
-                            <img src="assets/img/images/h10_about_shape.png" alt="shape" className="shape"/>
+                            <img src="/assets/img/images/h10_about_img01.jpg" alt="img" data-aos="fade-right" data-aos-delay="200"/>
+                            <img src="/assets/img/images/h10_about_img02.jpg" alt="img" data-aos="fade-left" data-aos-delay="400"/>
+                            <img src="/assets/img/images/h10_about_img03.jpg" alt="img" data-aos="fade-up" data-aos-delay="600"/>
+                            <img src="/assets/img/images/h10_about_shape.png" alt="shape" className="shape"/>
                             <div className="experience-year experience-year-two" data-aos="zoom-in" data-aos-delay="800">
                                 <div className="icon">
                                     <i className="flaticon-trophy"></i>
@@ -126,13 +126,13 @@ export default function Home() {
                                     </ul>
                                     <div className="about-author-info about-author-info-two">
                                         <div className="thumb">
-                                            <img src="assets/img/images/about_author.png" alt=""/>
+                                            <img src="/assets/img/images/about_author.png" alt=""/>
                                         </div>
                                         <div className="content">
                                             <h2 className="title">مارک استرنجر</h2>
                                             <span>سئو</span>
                                             <div className="signature">
-                                                <img src="assets/img/images/signature.png" alt=""/>
+                                                <img src="/assets/img/images/signature.png" alt=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -254,8 +254,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="services-shape-wrap">
-                <img src="assets/img/services/h6_services_shape01.png" alt="shape" data-aos="fade-down-left" data-aos-delay="400"/>
-                <img src="assets/img/services/h6_services_shape02.png" alt="shape" data-aos="fade-up-right" data-aos-delay="400"/>
+                <img src="/assets/img/services/h6_services_shape01.png" alt="shape" data-aos="fade-down-left" data-aos-delay="400"/>
+                <img src="/assets/img/services/h6_services_shape02.png" alt="shape" data-aos="fade-up-right" data-aos-delay="400"/>
             </div>
         </section>
         {/* <!-- services-area-end --> */}
@@ -321,7 +321,7 @@ export default function Home() {
                     <div className="col-12">
                         <div className="video-btn-three text-center">
                             <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" className="play-btn popup-video">
-                                <img src="assets/img/icons/play.svg" alt=""/>
+                                <img src="/assets/img/icons/play.svg" alt=""/>
                             </a>
                         </div>
                     </div>
@@ -334,16 +334,16 @@ export default function Home() {
         <div className="marquee__area pt-100" dir="ltr">
             <div className="marquee__wrap">
                 <div className="marquee__box">
-                    <a href="services.html">بازار یابی <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">مشاور مالی <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">سرمایه گذاری <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">هدف <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">بازار یابی <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">مشاور مالی <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">سرمایه گذاری <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">هدف <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
                 </div>
                 <div className="marquee__box">
-                    <a href="services.html">بازار یابی <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">مشاور مالی <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">سرمایه گذاری <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
-                    <a href="services.html">هدف <img src="assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">بازار یابی <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">مشاور مالی <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">سرمایه گذاری <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
+                    <a href="services.html">هدف <img src="/assets/img/images/marquee_icon.svg" alt=""/></a>
                 </div>
             </div>
         </div>
@@ -371,7 +371,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                         <div className="project-item-six">
                             <div className="project-thumb-six">
-                                <a href="project-details.html"><img src="assets/img/project/h7_project_img01.jpg" alt="img"/></a>
+                                <a href="project-details.html"><img src="/assets/img/project/h7_project_img01.jpg" alt="img"/></a>
                                 <a href="project-details.html" className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M10.7755 1.46939C10.7755 0.657867 11.4334 0 12.2449 0C13.0564 0 13.7143 0.657867 13.7143 1.46939V22.5306C13.7143 23.3421 13.0564 24 12.2449 24C11.4334 24 10.7755 23.3421 10.7755 22.5306V1.46939Z" fill="currentcolor" />
@@ -388,7 +388,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                         <div className="project-item-six active">
                             <div className="project-thumb-six">
-                                <a href="project-details.html"><img src="assets/img/project/h7_project_img02.jpg" alt="img"/></a>
+                                <a href="project-details.html"><img src="/assets/img/project/h7_project_img02.jpg" alt="img"/></a>
                                 <a href="project-details.html" className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M10.7755 1.46939C10.7755 0.657867 11.4334 0 12.2449 0C13.0564 0 13.7143 0.657867 13.7143 1.46939V22.5306C13.7143 23.3421 13.0564 24 12.2449 24C11.4334 24 10.7755 23.3421 10.7755 22.5306V1.46939Z" fill="currentcolor" />
@@ -405,7 +405,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                         <div className="project-item-six">
                             <div className="project-thumb-six">
-                                <a href="project-details.html"><img src="assets/img/project/h7_project_img03.jpg" alt="img"/></a>
+                                <a href="project-details.html"><img src="/assets/img/project/h7_project_img03.jpg" alt="img"/></a>
                                 <a href="project-details.html" className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M10.7755 1.46939C10.7755 0.657867 11.4334 0 12.2449 0C13.0564 0 13.7143 0.657867 13.7143 1.46939V22.5306C13.7143 23.3421 13.0564 24 12.2449 24C11.4334 24 10.7755 23.3421 10.7755 22.5306V1.46939Z" fill="currentcolor" />
@@ -422,7 +422,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                         <div className="project-item-six">
                             <div className="project-thumb-six">
-                                <a href="project-details.html"><img src="assets/img/project/h7_project_img04.jpg" alt="img"/></a>
+                                <a href="project-details.html"><img src="/assets/img/project/h7_project_img04.jpg" alt="img"/></a>
                                 <a href="project-details.html" className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M10.7755 1.46939C10.7755 0.657867 11.4334 0 12.2449 0C13.0564 0 13.7143 0.657867 13.7143 1.46939V22.5306C13.7143 23.3421 13.0564 24 12.2449 24C11.4334 24 10.7755 23.3421 10.7755 22.5306V1.46939Z" fill="currentcolor" />
@@ -461,7 +461,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img01.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img01.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -480,7 +480,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img02.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img02.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -499,7 +499,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img03.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img03.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -518,7 +518,7 @@ export default function Home() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img04.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img04.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -537,8 +537,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="team-shape-two">
-                <img src="assets/img/team/h9_team_shape01.png" alt="shape"/>
-                <img src="assets/img/team/h9_team_shape02.png" alt="shape" data-aos="fade-up" data-aos-delay="400"/>
+                <img src="/assets/img/team/h9_team_shape01.png" alt="shape"/>
+                <img src="/assets/img/team/h9_team_shape02.png" alt="shape" data-aos="fade-up" data-aos-delay="400"/>
             </div>
         </section>
         {/* <!-- team-area-end --> */}
@@ -549,11 +549,11 @@ export default function Home() {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-5 col-md-8">
                         <div className="testimonial-img-four">
-                            <img src="assets/img/images/h4_testimonial_img.png" alt=""/>
+                            <img src="/assets/img/images/h4_testimonial_img.png" alt=""/>
                             <div className="icon">
-                                <img src="assets/img/icons/quote02.svg" alt=""/>
+                                <img src="/assets/img/icons/quote02.svg" alt=""/>
                             </div>
-                            <img src="assets/img/images/h4_testimonial_img_shape.png" alt="" className="shape"/>
+                            <img src="/assets/img/images/h4_testimonial_img_shape.png" alt="" className="shape"/>
                         </div>
                     </div>
                     <div className="col-lg-7">
@@ -570,7 +570,7 @@ export default function Home() {
                                                 <i className="fas fa-star"></i>
                                             </div>
                                             <div className="testimonial-quote">
-                                                <img src="assets/img/icons/quote.svg" alt=""/>
+                                                <img src="/assets/img/icons/quote.svg" alt=""/>
                                             </div>
                                         </div>
                                         <p>“ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
@@ -591,7 +591,7 @@ export default function Home() {
                                                 <i className="fas fa-star"></i>
                                             </div>
                                             <div className="testimonial-quote">
-                                                <img src="assets/img/icons/quote.svg" alt=""/>
+                                                <img src="/assets/img/icons/quote.svg" alt=""/>
                                             </div>
                                         </div>
                                         <p>“ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
@@ -608,8 +608,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="testimonial-shape-wrap-four">
-                <img src="assets/img/images/h4_testimonial_shape01.png" alt="" data-aos="fade-up-right" data-aos-delay="200"/>
-                <img src="assets/img/images/h4_testimonial_shape02.png" alt="" data-aos="fade-down-left" data-aos-delay="200"/>
+                <img src="/assets/img/images/h4_testimonial_shape01.png" alt="" data-aos="fade-up-right" data-aos-delay="200"/>
+                <img src="/assets/img/images/h4_testimonial_shape02.png" alt="" data-aos="fade-down-left" data-aos-delay="200"/>
             </div>
         </section>
         {/* <!-- testimonial-area-end --> */}
@@ -620,32 +620,32 @@ export default function Home() {
                 <div className="row brand-active">
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img01.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img01.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img02.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img02.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img03.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img03.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img04.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img04.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img05.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img05.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img03.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img03.png" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -669,7 +669,7 @@ export default function Home() {
                     <div className="col-lg-4 col-md-6 col-sm-10">
                         <div className="blog-post-item-two">
                             <div className="blog-post-thumb-two">
-                                <a href="blog-details.html"><img src="assets/img/blog/h2_blog_img01.jpg" alt=""/></a>
+                                <a href="blog-details.html"><img src="/assets/img/blog/h2_blog_img01.jpg" alt=""/></a>
                                 <a href="blog.html" className="tag">توسعه</a>
                             </div>
                             <div className="blog-post-content-two">
@@ -678,7 +678,7 @@ export default function Home() {
                                 <div className="blog-meta">
                                     <ul className="list-wrap">
                                         <li>
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
+                                            <a href="blog-details.html"><img src="/assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
                                         </li>
                                         <li><i className="far fa-calendar"></i>22 اردیبهشت 1403</li>
                                     </ul>
@@ -689,7 +689,7 @@ export default function Home() {
                     <div className="col-lg-4 col-md-6 col-sm-10">
                         <div className="blog-post-item-two">
                             <div className="blog-post-thumb-two">
-                                <a href="blog-details.html"><img src="assets/img/blog/h2_blog_img02.jpg" alt=""/></a>
+                                <a href="blog-details.html"><img src="/assets/img/blog/h2_blog_img02.jpg" alt=""/></a>
                                 <a href="blog.html" className="tag">کسب و کار</a>
                             </div>
                             <div className="blog-post-content-two">
@@ -698,7 +698,7 @@ export default function Home() {
                                 <div className="blog-meta">
                                     <ul className="list-wrap">
                                         <li>
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
+                                            <a href="blog-details.html"><img src="/assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
                                         </li>
                                         <li><i className="far fa-calendar"></i>22 اردیبهشت 1403</li>
                                     </ul>
@@ -709,7 +709,7 @@ export default function Home() {
                     <div className="col-lg-4 col-md-6 col-sm-10">
                         <div className="blog-post-item-two">
                             <div className="blog-post-thumb-two">
-                                <a href="blog-details.html"><img src="assets/img/blog/h2_blog_img03.jpg" alt=""/></a>
+                                <a href="blog-details.html"><img src="/assets/img/blog/h2_blog_img03.jpg" alt=""/></a>
                                 <a href="blog.html" className="tag">دانش</a>
                             </div>
                             <div className="blog-post-content-two">
@@ -718,7 +718,7 @@ export default function Home() {
                                 <div className="blog-meta">
                                     <ul className="list-wrap">
                                         <li>
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
+                                            <a href="blog-details.html"><img src="/assets/img/blog/blog_avatar01.png" alt=""/>ادمین</a>
                                         </li>
                                         <li><i className="far fa-calendar"></i>22 اردیبهشت 1403</li>
                                     </ul>
@@ -772,8 +772,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="request-shape-wrap">
-                <img src="assets/img/images/h2_request_shape01.png" alt=""/>
-                <img src="assets/img/images/h2_request_shape02.png" alt="" data-aos="fade-left" data-aos-delay="200"/>
+                <img src="/assets/img/images/h2_request_shape01.png" alt=""/>
+                <img src="/assets/img/images/h2_request_shape02.png" alt="" data-aos="fade-left" data-aos-delay="200"/>
             </div>
         </section>
         {/* <!-- request-area-end --> */}

@@ -7,7 +7,7 @@ export default function Footer() {
                         <div className="col-lg-4 col-md-7">
                             <div className="footer-widget">
                                 <div className="fw-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""/></a>
+                                    <a href="index.html"><img src="/assets/img/logo/logo.png" alt=""/></a>
                                 </div>
                                 <div className="footer-content">
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>

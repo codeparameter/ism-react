@@ -18,8 +18,8 @@ export default function Contact() {
             </div>
         </div>
         <div className="breadcrumb-shape-wrap">
-            <img src="assets/img/images/breadcrumb_shape01.png" alt=""/>
-            <img src="assets/img/images/breadcrumb_shape02.png" alt=""/>
+            <img src="/assets/img/images/breadcrumb_shape01.png" alt=""/>
+            <img src="/assets/img/images/breadcrumb_shape02.png" alt=""/>
         </div>
     </section>
     {/*<!-- breadcrumb-area-end -->*/}
@@ -30,7 +30,7 @@ export default function Contact() {
             <div className="row align-items-center">
                 <div className="col-lg-6">
                     <div className="inner-contact-img">
-                        <img src="assets/img/images/contact_img.jpg" alt=""/>
+                        <img src="/assets/img/images/contact_img.jpg" alt=""/>
                     </div>
                 </div>
                 <div className="col-lg-6">

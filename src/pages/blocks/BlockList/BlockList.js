@@ -17,9 +17,9 @@ export default function BlockList(){
         { err && <div>{ err }</div> }
         <Preload pnd={pnd} />
 
-        {/*<!-- main-area -->*/}
-        <main className="fix">
 
+        {blocks && <>
+        
             {/*<!-- breadcrumb-area -->*/}
             <section className="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
                 <div className="container">
@@ -38,8 +38,8 @@ export default function BlockList(){
                     </div>
                 </div>
                 <div className="breadcrumb-shape-wrap">
-                    <img src="assets/img/images/breadcrumb_shape01.png" alt=""/>
-                    <img src="assets/img/images/breadcrumb_shape02.png" alt=""/>
+                    <img src="/assets/img/images/breadcrumb_shape01.png" alt=""/>
+                    <img src="/assets/img/images/breadcrumb_shape02.png" alt=""/>
                 </div>
             </section>
             {/*<!-- breadcrumb-area-end -->*/}
@@ -94,7 +94,7 @@ export default function BlockList(){
                                         <div className="rc-post-wrap">
                                             <div className="rc-post-item">
                                                 <div className="thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/rc_post01.jpg" alt=""/></a>
+                                                    <a href="blog-details.html"><img src="/assets/img/blog/rc_post01.jpg" alt=""/></a>
                                                 </div>
                                                 <div className="content">
                                                     <span className="date"><i className="far fa-calendar"></i>1402/05/27</span>
@@ -103,7 +103,7 @@ export default function BlockList(){
                                             </div>
                                             <div className="rc-post-item">
                                                 <div className="thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/rc_post02.jpg" alt=""/></a>
+                                                    <a href="blog-details.html"><img src="/assets/img/blog/rc_post02.jpg" alt=""/></a>
                                                 </div>
                                                 <div className="content">
                                                     <span className="date"><i className="far fa-calendar"></i>1402/05/27</span>
@@ -112,7 +112,7 @@ export default function BlockList(){
                                             </div>
                                             <div className="rc-post-item">
                                                 <div className="thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/rc_post03.jpg" alt=""/></a>
+                                                    <a href="blog-details.html"><img src="/assets/img/blog/rc_post03.jpg" alt=""/></a>
                                                 </div>
                                                 <div className="content">
                                                     <span className="date"><i className="far fa-calendar"></i>1402/05/27</span>
@@ -121,7 +121,7 @@ export default function BlockList(){
                                             </div>
                                             <div className="rc-post-item">
                                                 <div className="thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/rc_post04.jpg" alt=""/></a>
+                                                    <a href="blog-details.html"><img src="/assets/img/blog/rc_post04.jpg" alt=""/></a>
                                                 </div>
                                                 <div className="content">
                                                     <span className="date"><i className="far fa-calendar"></i>1402/05/27</span>
@@ -149,12 +149,13 @@ export default function BlockList(){
                 </div>
             </section>
             {/*<!-- blog-area-end -->*/}
+        </>}
 
 
-        </main>
-
-        <PBut bUrl={previous} txt='previous' />
-        <PBut bUrl={next} txt='next' />
+        <div dir="ltr" style={{marginInline: 'auto', width: 'max-content'}}>
+            <PBut bUrl={previous} txt='<' />
+            <PBut bUrl={next} txt='>' />
+        </div>
 
       </>
     );

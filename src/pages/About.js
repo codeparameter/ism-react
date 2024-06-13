@@ -19,8 +19,8 @@ export default function About() {
                 </div>
             </div>
             <div className="breadcrumb-shape-wrap">
-                <img src="assets/img/images/breadcrumb_shape01.png" alt=""/>
-                <img src="assets/img/images/breadcrumb_shape02.png" alt=""/>
+                <img src="/assets/img/images/breadcrumb_shape01.png" alt=""/>
+                <img src="/assets/img/images/breadcrumb_shape02.png" alt=""/>
             </div>
         </section>
         {/*<!-- breadcrumb-area-end -->*/}
@@ -31,7 +31,7 @@ export default function About() {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6 col-md-9">
                         <div className="about-img-eight">
-                            <img src="assets/img/images/inner_about_img03.jpg" alt=""/>
+                            <img src="/assets/img/images/inner_about_img03.jpg" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -63,7 +63,7 @@ export default function About() {
                                     </li>
                                 </ul>
                                 <div className="right-slide-img">
-                                    <img src="assets/img/images/inner_about_img04.jpg" alt=""/>
+                                    <img src="/assets/img/images/inner_about_img04.jpg" alt=""/>
                                 </div>
                             </div>
                             <div className="about-content-bottom">
@@ -72,7 +72,7 @@ export default function About() {
                                 </div>
                                 <div className="about-author-info">
                                     <div className="thumb">
-                                        <img src="assets/img/images/about_author.png" alt=""/>
+                                        <img src="/assets/img/images/about_author.png" alt=""/>
                                     </div>
                                     <div className="content">
                                         <h2 className="title">مارک استرنجر</h2>
@@ -144,7 +144,7 @@ export default function About() {
                     </div>
                     <div className="col-lg-6">
                         <div className="choose-img-three">
-                            <img src="assets/img/images/inner_choose_img.jpg" alt=""/>
+                            <img src="/assets/img/images/inner_choose_img.jpg" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ export default function About() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img01.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img01.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -188,7 +188,7 @@ export default function About() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img02.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img02.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -207,7 +207,7 @@ export default function About() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img03.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img03.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -226,7 +226,7 @@ export default function About() {
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                         <div className="team-item">
                             <div className="team-thumb">
-                                <img src="assets/img/team/team_img04.jpg" alt=""/>
+                                <img src="/assets/img/team/team_img04.jpg" alt=""/>
                                 <div className="team-social">
                                     <ul className="list-wrap">
                                         <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -254,7 +254,7 @@ export default function About() {
                 <div className="row g-0 align-items-end">
                     <div className="col-37">
                         <div className="testimonial-img-three">
-                            <img src="assets/img/images/h3_testimonial_img.jpg" alt=""/>
+                            <img src="/assets/img/images/h3_testimonial_img.jpg" alt=""/>
                         </div>
                     </div>
                     <div className="col-63">
@@ -307,32 +307,32 @@ export default function About() {
                 <div className="row brand-active">
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img01.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img01.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img02.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img02.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img03.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img03.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img04.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img04.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img05.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img05.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="brand-item">
-                            <img src="assets/img/brand/brand_img03.png" alt=""/>
+                            <img src="/assets/img/brand/brand_img03.png" alt=""/>
                         </div>
                     </div>
                 </div>
