@@ -1,5 +1,4 @@
 function onUrlHome(){
-  console.log('hi');
   const text = document.querySelector(".circle");
   text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
   const element = document.querySelectorAll(".circle span");

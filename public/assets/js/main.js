@@ -101,7 +101,6 @@ function aosAnimation() {
 }
 
 function onUrlMain () {
-	console.log('aa');
 	preloader();
 	mainSlider();
 	wowAnimation();

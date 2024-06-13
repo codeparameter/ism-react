@@ -7526,7 +7526,7 @@ label {
 .pagination-wrap .pagination {
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .pagination-wrap .pagination .page-link {
     margin-left: 0;
