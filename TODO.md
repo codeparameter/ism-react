@@ -1,8 +1,15 @@
+BlockDetails
+BlockList buttons
+about us
+contact us
 
-): main.js + final.js not  working on changing the route
-): redirect to 404 when fetch status is 404
+:
 
+redirect to 404 when fetch status is 404
+error handling
+
+v2:
 admin:
 
-): Forms
-): createBlock: form + fetch
+Forms
+createBlock: form + fetch
