@@ -3581,3 +3581,9 @@
 }
 
 }
+
+/* from 0 px width */
+
+.breadcrumb-bg {
+    padding: 120px 0 70px;
+}
