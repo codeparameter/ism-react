@@ -122,7 +122,7 @@ export default function Header() {
                             <nav className="menu-box">
                                 <div className="close-btn"><i className="fas fa-times"></i></div>
                                 <div className="nav-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"/></a>
+                                    <NavLink to="/"><img src="assets/img/logo/logo.png" alt="Logo"/></NavLink>
                                 </div>
                                 <div className="mobile-search">
                                     <form action="#">
@@ -181,7 +181,7 @@ export default function Header() {
                 <button><i className="far fa-window-close"></i></button>
             </div>
             <div className="logo-side mb-30">
-                <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"/></a>
+                <NavLink to="/"><img src="assets/img/logo/logo.png" alt="Logo"/></NavLink>
             </div>
             <div className="side-info mb-30">
                 <div className="contact-list mb-30">

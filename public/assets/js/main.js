@@ -4,13 +4,6 @@
 (function ($) {
 	"use strict";
 
-/*=============================================
-	=    		 Preloader			      =
-=============================================*/
-function preloader() {
-	$('#preloader').delay(0).fadeOut();
-};
-
 
 /*=============================================
 	=    		 Main Slider		      =
@@ -101,7 +94,6 @@ function aosAnimation() {
 }
 
 function onUrlMain () {
-	preloader();
 	mainSlider();
 	wowAnimation();
 	aosAnimation();

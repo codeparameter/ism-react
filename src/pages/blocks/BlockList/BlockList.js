@@ -1,3 +1,4 @@
+import Preload from "../../../components/Preload";
 import usePageTitle from "../../../components/usePageTitle";
 import usePagination from "../../../utils/usePagination";
 import BlockPreviewCard from "./components/BlockPreviewCard";
@@ -14,7 +15,7 @@ export default function BlockList(){
 
         
         { err && <div>{ err }</div> }
-
+        <Preload pnd={pnd} />
 
         {/*<!-- main-area -->*/}
         <main className="fix">
@@ -51,7 +52,6 @@ export default function BlockList(){
                             <div className="col-71">
                                 <div className="blog-post-wrap">
                                     <div className="row">
-                                        { pnd && [...Array(10).keys()].map(idx => <BlockPreviewCard key={idx}/>)}
                                         { blocks.map(block => <BlockPreviewCard block={block} key={block.id}/>)}            
                                     </div>
                                     <div className="pagination-wrap mt-30">
