@@ -1,28 +1,9 @@
+import BreadCrumb from "../components/BreadCrumb";
+
 export default function Contact() {
     return <>
-    {/*<!-- breadcrumb-area -->*/}
-    <section className="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="breadcrumb-content">
-                        <h2 className="title">تماس با ما</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="index.html">خانه</a></li>
-                                <li className="breadcrumb-item active" aria-current="page">تماس با ما</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="breadcrumb-shape-wrap">
-            <img src="/assets/img/images/breadcrumb_shape01.png" alt=""/>
-            <img src="/assets/img/images/breadcrumb_shape02.png" alt=""/>
-        </div>
-    </section>
-    {/*<!-- breadcrumb-area-end -->*/}
+    
+    <BreadCrumb title={'contact'} />
 
     {/*<!-- contact-area -->*/}
     <section className="inner-contact-area pt-120 pb-120">

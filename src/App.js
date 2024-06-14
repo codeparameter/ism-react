@@ -28,12 +28,12 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact/>}/>
-      <Route path="login" element={<Login/>} />
-      <Route path="admin" element={<Admin/>}>
+      {/* <Route path="login" element={<Login/>} /> */}
+      {/* <Route path="admin" element={<Admin/>}>
         <Route path="blocks" element={<AdminBlock/>}>
           <Route path="create" element={<BlockCerate/>} />
         </Route>
-      </Route>
+      </Route> */}
       <Route path="blocks">
         <Route index element={<BlockList/>} />
         <Route path=":id" element={<BlockDetails/>} />

@@ -1,7 +1,7 @@
 import usePageTitle from "../components/usePageTitle";
 
 export default function Home() {
-  usePageTitle("دیجی معدن");
+  usePageTitle("home");
   
     return <>
         

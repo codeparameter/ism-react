@@ -1,48 +1,22 @@
 import Preload from "../../../components/Preload";
-import usePageTitle from "../../../components/usePageTitle";
 import usePagination from "../../../utils/usePagination";
+import BreadCrumb from "../../../components/BreadCrumb";
 import BlockPreviewCard from "./components/BlockPreviewCard";
 
 export default function BlockList(){
-
-    
-    usePageTitle("سنگ ها");
 
     let { pnd, err, list: blocks, next, previous, PBut} = usePagination('blocks/');
 
     return (
       <>
 
+        <BreadCrumb title={'blocks'} />
         
         { err && <div>{ err }</div> }
         <Preload pnd={pnd} />
 
 
         {blocks && <>
-        
-            {/*<!-- breadcrumb-area -->*/}
-            <section className="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="breadcrumb-content">
-                                <h2 className="title">آخرین مطالب ما</h2>
-                                <nav aria-label="breadcrumb">
-                                    <ol className="breadcrumb">
-                                        <li className="breadcrumb-item"><a href="index.html">خانه</a></li>
-                                        <li className="breadcrumb-item active" aria-current="page">وبلاگ</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="breadcrumb-shape-wrap">
-                    <img src="/assets/img/images/breadcrumb_shape01.png" alt=""/>
-                    <img src="/assets/img/images/breadcrumb_shape02.png" alt=""/>
-                </div>
-            </section>
-            {/*<!-- breadcrumb-area-end -->*/}
 
             {/*<!-- blog-area -->*/}
             <section className="blog-area pt-120 pb-120">

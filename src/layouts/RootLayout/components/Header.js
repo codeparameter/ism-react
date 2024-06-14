@@ -1,6 +1,17 @@
-import { NavLink } from "react-router-dom";
+import {useContext} from "react";
+import {NavLink} from "react-router-dom";
+import { GlobalContext } from "../RootLayout";
+import useLocPhrase from "../../../utils/GlobalContext/states/useLoc";
+
+export const LanguageItem = ({lang}) => {
+    const {states} = useContext(GlobalContext);
+    return <li><button onClick={()=>{states.useLoc.setLoc(lang)}}>{useLocPhrase(lang)}</button></li>;
+};
+
 
 export default function Header() {
+    const {constantDBs} = useContext(GlobalContext);
+
     return <header className="transparent-header">
         <div className="heder-top-wrap">
             <div className="container custom-container-seven">
@@ -105,6 +116,11 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li><NavLink to="contact">تماس با ما</NavLink></li>
+                                        <li className="menu-item-has-children" style={{padding: '36px 15px', color: 'var(--tg-white)'}}><i className="fa fa-globe" aria-hidden="true"></i>
+                                            <ul className="sub-menu">
+                                                {constantDBs.LocList.map(loc => <LanguageItem key={loc} lang={loc} />)}
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="header-action header-action-six d-none d-md-block">

@@ -8,3 +8,7 @@
   -o-transition: opacity .25s ease-in-out, .25s visibility linear;
   transition: opacity .25s ease-in-out, .25s visibility linear;
 }
+
+.menu-item-has-children:hover i{
+  color: var(--tg-primary-color);
+}
