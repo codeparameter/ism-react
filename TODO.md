@@ -1,5 +1,6 @@
 BlockDetails
 BlockList buttons
+use offset and limit NavLink instead of path state button in pagination (so users can share a link)
 
 visual bugs:
 preLoader > pagination
