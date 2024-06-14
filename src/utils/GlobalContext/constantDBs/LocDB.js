@@ -26,22 +26,26 @@ export const LocDB = {
         'fa': 'سنگ‌ها',
     },
     // page titles
-    // "title-home": {
-    //     'en': 'DigiMadan',
-    //     'fa': 'دیجی‌معدن',
-    // },
-    // "title-about": {
-    //     'en': 'DigiMadan | About us',
-    //     'fa': 'دیجی‌معدن | درباره‌ما',
-    // },
-    // "title-contact": {
-    //     'en': 'DigiMadan | Contact us',
-    //     'fa': 'دیجی‌معدن | تماس باما',
-    // },
-    // "title-blocks": {
-    //     'en': 'DigiMadan | Blocks',
-    //     'fa': 'دیجی‌معدن | سنگ‌ها',
-    // },
+    "title-home": {
+        'en': 'DigiMadan',
+        'fa': 'دیجی‌معدن',
+    },
+    "title-about": {
+        'en': 'DigiMadan | About us',
+        'fa': 'دیجی‌معدن | درباره‌ما',
+    },
+    "title-contact": {
+        'en': 'DigiMadan | Contact us',
+        'fa': 'دیجی‌معدن | تماس باما',
+    },
+    "title-blocks": {
+        'en': 'DigiMadan | Blocks',
+        'fa': 'دیجی‌معدن | سنگ‌ها',
+    },
+    "title-details": {
+        'en': 'DigiMadan | Details',
+        'fa': 'دیجی‌معدن | جزئیات',
+    },
     // Lang
     "en": {
         'en': 'English',

@@ -15,7 +15,6 @@ export function useLoc(defaultLoc) {
 export default function useLocPhrase(defaultPhrase){
     const [phrase, setPhrase] = useState('');
     const {constantDBs, states} = useContext(GlobalContext);
-    console.log(defaultPhrase);
     defaultPhrase = isNaN(defaultPhrase) ? defaultPhrase : 'details';
     assert(constantDBs.LocDB.hasOwnProperty(defaultPhrase), `the phrase ${defaultPhrase} don't exist`);
     useEffect(()=>{
