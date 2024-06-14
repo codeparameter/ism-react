@@ -23,7 +23,10 @@ export default function usePagination(basePath) {
     }
 
     function pagBut(url){
-      return () => {setPath(url);};
+      return () => {
+        setPath(url);
+        window.scrollTo(0, 0);
+    };
     }
     
     function PBut({bUrl, txt='', disTxt=''}){
