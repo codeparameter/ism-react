@@ -110,7 +110,7 @@ function onUrlMain () {
 		// animate
 		$('html, body').animate({
 			scrollTop: $(target).offset().top
-		}, 1000);
+		}, 250);
 	
 		});
 	}
