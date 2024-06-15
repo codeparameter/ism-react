@@ -85,7 +85,7 @@
 .error-area {
     padding: 120px 0;
 }
-.error-content .error-404 {
+.error-content .error-code {
     font-size: 350px;
 }
 
@@ -836,7 +836,7 @@
 .contact-map {
     height: 400px;
 }
-.error-content .error-404 {
+.error-content .error-code {
     font-size: 300px;
 }
 
@@ -2358,7 +2358,7 @@
 .contact-map {
     height: 350px;
 }
-.error-content .error-404 {
+.error-content .error-code {
     font-size: 150px;
 }
 .error-content .title {
@@ -2531,7 +2531,7 @@
 .inner-contact-info .title {
     font-size: 30px;
 }
-.error-content .error-404 {
+.error-content .error-code {
     font-size: 200px;
 }
 

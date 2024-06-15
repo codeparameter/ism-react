@@ -29,6 +29,7 @@ export default function RootLayout() {
       
 
       <main className="fix">
+        <div className="header-bg"></div>
         <Outlet />
       </main>
 

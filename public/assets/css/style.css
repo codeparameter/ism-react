@@ -8132,13 +8132,13 @@ label {
 .error-content {
     text-align: center;
 }
-.error-content .error-404 {
+.error-content .error-code {
     font-size: 400px;
     margin-bottom: 50px;
     line-height: .74;
     font-weight: 800;
 }
-.error-content .error-404 span {
+.error-content .error-code span {
     color: var(--tg-primary-color);
 }
 .error-content .title {

@@ -4,6 +4,15 @@ export const LocList = [
 ];
 
 export const LocDB = {
+    // Lang
+    "en": {
+        'en': 'English',
+        'fa': 'انگلیسی',
+    },
+    "fa": {
+        'en': 'Persian',
+        'fa': 'فارسی',
+    },
     // routes
     "home": {
         'en': 'Home',
@@ -46,14 +55,21 @@ export const LocDB = {
         'en': 'DigiMadan | Details',
         'fa': 'دیجی‌معدن | جزئیات',
     },
-    // Lang
-    "en": {
-        'en': 'English',
-        'fa': 'انگلیسی',
-    },
-    "fa": {
-        'en': 'Persian',
-        'fa': 'فارسی',
-    },
     // errors
+    "title-404": {
+        'en': 'NotFound | 404',
+        'fa': 'یافت نشد | 404',
+    },
+    "error-404-head": {
+        'en': 'Sorry, the requested page was not found',
+        'fa': 'متاسفانه صفحه درخواستی یافت نشد.'
+    },
+    "error-404-body": {
+        'en': 'This page does not exist. You may have entered the wrong page address or this page no longer exists.',
+        'fa': 'این صفحه وجود ندارد. ممکن است آدرس صفحه را اشتباه وارد کرده باشید یا این صفحه دیگر وجود نداشته باشد.'
+    },
+    "error-404-redirect-msg": {
+        'en': 'Go Back To Home Page',
+        'fa': 'برگرد به صفحه اصلی',
+    },
 };
