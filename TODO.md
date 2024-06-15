@@ -5,6 +5,8 @@ green and red for available
 404 template
 
 visual bugs:
+header-bg responsive
+error page paddings margins
 preLoader > pagination
 :
 
