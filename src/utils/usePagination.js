@@ -19,7 +19,7 @@ export default function usePagination() {
                             );
         if(new URLSearchParams(window.location.search).size == 0){
             if (basePath.slice(-1) != '/'){
-                basePath += '/'
+                basePath += '/';
             }
         }
         setPath(basePath);
