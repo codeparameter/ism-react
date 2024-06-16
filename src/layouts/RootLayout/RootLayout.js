@@ -19,7 +19,7 @@ export default function RootLayout() {
   };
   
   return (
-    <GlobalContext.Provider value={{constantDBs, states}} className="root-layout">
+    <GlobalContext.Provider value={{constantDBs, states}}>
       
       <ScrollRestoration />
       
