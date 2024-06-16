@@ -1,6 +1,7 @@
 import Preload from "../../../components/Preload";
-import usePagination from "../../../utils/usePagination";
+import ErrorHandling from "../../../components/ErrorHandling";
 import BreadCrumb from "../../../components/BreadCrumb";
+import usePagination from "../../../utils/usePagination";
 import BlockPreviewCard from "./components/BlockPreviewCard";
 
 export default function BlockList(){
@@ -9,16 +10,15 @@ export default function BlockList(){
 
     return (
       <>
-
-        <BreadCrumb title={'blocks'} />
         
-        { err && <div>{ err }</div> }
+        { err && <ErrorHandling code={`${err.status}`} redirectLink="/blocks" redirectMsg="blocks" /> }
         <Preload pnd={pnd} />
 
 
         {blocks && <>
 
-            {/*<!-- blog-area -->*/}
+            <BreadCrumb title={'blocks'} />
+
             <section className="blog-area pt-120 pb-120">
                 <div className="container">
                     <div className="inner-blog-wrap">
@@ -122,7 +122,6 @@ export default function BlockList(){
                     </div>
                 </div>
             </section>
-            {/*<!-- blog-area-end -->*/}
         </>}
 
 
