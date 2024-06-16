@@ -1,12 +1,12 @@
+import usePagination from "../../../utils/usePagination";
 import Preload from "../../../components/Preload";
 import ErrorHandling from "../../../components/ErrorHandling";
 import BreadCrumb from "../../../components/BreadCrumb";
-import usePagination from "../../../utils/usePagination";
 import BlockPreviewCard from "./components/BlockPreviewCard";
 
 export default function BlockList(){
 
-    let { pnd, err, list: blocks, next, previous, PBut} = usePagination('blocks/');
+    let { pnd, err, list: blocks, next, previous, PBut} = usePagination();
 
     return (
       <>
@@ -122,13 +122,12 @@ export default function BlockList(){
                     </div>
                 </div>
             </section>
+            
+            <div dir="ltr" style={{marginInline: 'auto', width: 'max-content'}}>
+                <PBut target={previous} txt='<' />
+                <PBut target={next} txt='>' />
+            </div>
         </>}
-
-
-        <div dir="ltr" style={{marginInline: 'auto', width: 'max-content'}}>
-            <PBut bUrl={previous} txt='<' />
-            <PBut bUrl={next} txt='>' />
-        </div>
 
       </>
     );

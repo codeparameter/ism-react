@@ -10,9 +10,13 @@ export default function ListPage({basePath, itemViewFn}){
 
         { err && <div>{ err }</div> }
         { pnd && <div>Loading...</div> }
-        <PBut bUrl={previous} txt='previous' />
-        <PBut bUrl={next} txt='next' />
-        { list.map(itemViewFn) }
+        { list &&
+        <>
+          { list.map(itemViewFn) }
+          <PBut bUrl={previous} txt='previous' />
+          <PBut bUrl={next} txt='next' />
+        </>
+        }
 
       </div>
     );

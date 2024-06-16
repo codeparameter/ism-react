@@ -1,9 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import useFetch from "./useFetch";
 
-export default function usePagination(basePath) {
+export default function usePagination() {
 
-    const [path, setPath] = useState(basePath);
+    const [path, setPath] = useState('');
+
+    let currentPath, basePath;
+    const location = useLocation();
+    const currentRout = location.pathname.slice(1);
+
+    useEffect(()=>{
+        currentPath = window.location.href;
+        basePath = currentPath.slice(
+                                currentPath.indexOf(
+                                    currentRout
+                                )
+                            );
+        if(new URLSearchParams(window.location.search).size == 0){
+            if (basePath.slice(-1) != '/'){
+                basePath += '/'
+            }
+        }
+        setPath(basePath);
+    }, [location]);
 
     const{ pnd, res, err } = useFetch({path});
     
@@ -11,7 +31,7 @@ export default function usePagination(basePath) {
 
     function pagUrl(url){
         if(url){
-            return url.slice(url.indexOf(basePath));
+            return url.slice(url.indexOf(currentRout));
         }
         return null;
     }
@@ -29,11 +49,13 @@ export default function usePagination(basePath) {
     };
     }
     
-    function PBut({bUrl, txt='', disTxt=''}){
-        return bUrl ?
-            (<button onClick={pagBut(bUrl)}>{txt}</button>)
+    function PBut({target, txt='', disTxt=''}){
+        if (!target) return <Link disabled>{disTxt}</Link>;
+        target = '/' + target;
+        return target ?
+            (<Link to={target}>{txt}</Link>)
             :
-            (<button disabled>{disTxt}</button>)
+            (<Link disabled>{disTxt}</Link>)
             ;
     }
 
