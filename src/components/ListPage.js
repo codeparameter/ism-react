@@ -1,8 +1,8 @@
 import usePagination from "../utils/usePagination";
 
-export default function ListPage({basePath, itemViewFn}){
+export default function ListPage({itemViewFn}){
 
-    let { pnd, err, list, next, previous, PBut} = usePagination(basePath);
+    let { pnd, err, list, next, previous, PBut} = usePagination();
 
     return (
       <div className="">
