@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import useLocPhrase from '../utils/GlobalContext/states/useLoc';
+import useLocPhrase from './GlobalContext/states/useLoc';
 
 export default function usePageTitle( title ){
   const location = useLocation();  
@@ -9,6 +9,4 @@ export default function usePageTitle( title ){
   useEffect(() => {
     document.title = pageTitle;
   }, [location, pageTitle]);
-
-  return null;
 };

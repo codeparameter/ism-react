@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import useLocPhrase from "../utils/GlobalContext/states/useLoc";
-import usePageTitle from "./usePageTitle";
+import usePageTitle from "../utils/usePageTitle";
 
 export const BreadCrumpBase = ({target, title}) => {
     return <li className="breadcrumb-item"><Link to={target}>{useLocPhrase(title)}</Link></li>;

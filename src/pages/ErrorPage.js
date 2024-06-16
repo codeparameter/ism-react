@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useLocPhrase from "../utils/GlobalContext/states/useLoc";
-import usePageTitle from "../components/usePageTitle";
+import usePageTitle from "../utils/usePageTitle";
 
 export default function ErrorPage({code, redirectLink, redirectMsg}) {
     usePageTitle(code);

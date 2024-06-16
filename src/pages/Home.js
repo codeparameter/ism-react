@@ -1,4 +1,4 @@
-import usePageTitle from "../components/usePageTitle";
+import usePageTitle from "../utils/usePageTitle";
 
 export default function Home() {
   usePageTitle("home");
