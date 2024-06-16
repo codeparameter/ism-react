@@ -14,7 +14,9 @@ export default function ErrorPage({code, redirectLink}) {
                             <h1 className="error-code">{code.slice(0,1)}<span>{code.slice(1, 2)}</span>{code.slice(2, 3)}</h1>
                             <h2 className="title">{useLocPhrase(`error-${code}-head`)}</h2>
                             <p>{useLocPhrase(`error-${code}-body`)}</p>
+                            <div>
                             <Link to={redirectLink} className="btn btn-three">{useLocPhrase(`error-${code}-redirect-msg`)}</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
