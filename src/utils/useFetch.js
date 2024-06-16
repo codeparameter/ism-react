@@ -42,7 +42,8 @@ export function Fetch({
     .then(res => {
       if (!res.ok) { // err coming back from server
         console.log(res);
-        throw Error('could not fetch the res for that resource');
+        setErr(res);
+        throw Error();
       } 
       return res.json();
     })
@@ -53,7 +54,7 @@ export function Fetch({
     })
     .catch(err => {
       setPnd(false);
-      setErr(err);
+      setRes(null);
     });
 }
 

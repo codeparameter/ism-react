@@ -38,7 +38,7 @@ const router = createBrowserRouter(
         <Route index element={<BlockList/>} />
         <Route path=":id" element={<BlockDetails/>} />
       </Route>
-      <Route path="*" element={<ErrorPage code={'404'} redirectLink="/" />} />
+      <Route path="*" element={<ErrorPage code="404" redirectLink="/" redirectMsg="home" />} />
     </Route>
   )
 )

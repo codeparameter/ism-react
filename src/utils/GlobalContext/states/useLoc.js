@@ -1,7 +1,7 @@
 import {useState, useContext, useEffect} from "react";
 import { GlobalContext } from "../../../layouts/RootLayout/RootLayout";
 import { LocList } from "../constantDBs/LocDB";
-import {assert} from "../../errorHandling";
+import {assert} from "../../../components/ErrorHandling";
 
 export function useLoc(defaultLoc) {
     const [loc, setLocFn] = useState(defaultLoc);

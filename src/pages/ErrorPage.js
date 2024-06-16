@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import useLocPhrase from "../utils/GlobalContext/states/useLoc";
 import usePageTitle from "../components/usePageTitle";
 
-export default function ErrorPage({code, redirectLink}) {
+export default function ErrorPage({code, redirectLink, redirectMsg}) {
     usePageTitle(code);
     return (
         <section className="error-area">
@@ -15,7 +15,7 @@ export default function ErrorPage({code, redirectLink}) {
                             <h2 className="title">{useLocPhrase(`error-${code}-head`)}</h2>
                             <p>{useLocPhrase(`error-${code}-body`)}</p>
                             <div>
-                            <Link to={redirectLink} className="btn btn-three">{useLocPhrase(`error-${code}-redirect-msg`)}</Link>
+                            <Link to={redirectLink} className="btn btn-three">{useLocPhrase(`redirect-${redirectMsg}`)}</Link>
                             </div>
                         </div>
                     </div>

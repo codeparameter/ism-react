@@ -67,7 +67,6 @@ main.fix{
 }
 .error-content .title {
   margin-bottom: 0;
-  overflow-y: auto;
 }
 .error-content p {
   margin-bottom: 0;

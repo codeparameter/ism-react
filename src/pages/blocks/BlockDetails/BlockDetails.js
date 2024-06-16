@@ -2,6 +2,7 @@ import {useParams}  from "react-router-dom";
 import useFetch from "../../../utils/useFetch";
 import Preload from "../../../components/Preload";
 import BreadCrumb from "../../../components/BreadCrumb";
+import ErrorHandling from "../../../components/ErrorHandling";
 
 export default function BlockDetails() {
 
@@ -11,14 +12,13 @@ export default function BlockDetails() {
 
     return <>
       
-    <BreadCrumb title={'details'} />
-      
-      { err && <div>{ err }</div> }
+      { err && <ErrorHandling code={`${err.status}`} redirectLink="/blocks" redirectMsg="blocks" /> }
       <Preload pnd={pnd} />
 
       {block && <>
 
-        {/*<!-- project-details-area -->*/}
+        <BreadCrumb title={'details'} />
+        
         <section className="project-details-area pt-120 pb-120">
             <div className="container">
                 <div className="row">
@@ -89,7 +89,6 @@ export default function BlockDetails() {
                 </div>
             </div>
         </section>
-        {/*<!-- project-details-area-end -->*/}
 
       </>}
     </>;

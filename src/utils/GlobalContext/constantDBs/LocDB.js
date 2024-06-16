@@ -68,8 +68,13 @@ export const LocDB = {
         'en': 'This page does not exist. You may have entered the wrong page address or this page no longer exists.',
         'fa': 'این صفحه وجود ندارد. ممکن است آدرس صفحه را اشتباه وارد کرده باشید یا این صفحه دیگر وجود نداشته باشد.'
     },
-    "error-404-redirect-msg": {
+    // redirect msg
+    "redirect-home": {
         'en': 'Go Back To Home Page',
         'fa': 'برگرد به صفحه اصلی',
+    },
+    "redirect-blocks": {
+        'en': 'Go Back To Blocks Page',
+        'fa': 'برگرد به صفحه سنگ‌ها',
     },
 };
