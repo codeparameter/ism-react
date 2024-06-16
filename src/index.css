@@ -56,9 +56,10 @@ main.fix{
 }
 
 .error-area .error-content {
-  padding-top: 180px;
+  padding-block: 180px 25px;
   height: 100vh;
   display: grid;
+  row-gap: 25px;
 }
 
 .error-content .error-code {
@@ -66,7 +67,9 @@ main.fix{
 }
 .error-content .title {
   margin-bottom: 0;
+  overflow-y: auto;
 }
 .error-content p {
   margin-bottom: 0;
+  overflow-y: auto;
 }
