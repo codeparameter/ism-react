@@ -1,37 +1,21 @@
-import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import useFetch from "./useFetch";
+import useFetcher from "./useFetch";
 
 export default function usePagination() {
 
-    const [path, setPath] = useState('');
+    const pathname = useLocation().pathname.slice(1);
 
-    let currentPath, basePath;
-    const location = useLocation();
-    const currentRout = location.pathname.slice(1);
-
-    useEffect(()=>{
-        currentPath = window.location.href;
-        basePath = currentPath.slice(
-                                currentPath.indexOf(
-                                    currentRout
-                                )
-                            );
-        if(new URLSearchParams(window.location.search).size == 0){
-            if (basePath.slice(-1) != '/'){
-                basePath += '/';
-            }
-        }
-        setPath(basePath);
-    }, [location]);
-
-    const{ pnd, res, err } = useFetch({path});
+    const{ pnd, res, err } = useFetcher({});
     
     let list = [], next = null, previous = null;
 
     function pagUrl(url){
         if(url){
-            return url.slice(url.indexOf(currentRout));
+            return url.slice(
+                        url.indexOf(
+                            pathname
+                            )
+                        );
         }
         return null;
     }
@@ -40,13 +24,6 @@ export default function usePagination() {
         list = res.results;
         previous = pagUrl(res.previous);
         next = pagUrl(res.next);
-    }
-
-    function pagBut(url){
-      return () => {
-        setPath(url);
-        window.scrollTo(0, 0);
-    };
     }
     
     function PBut({target, txt='', disTxt=''}){

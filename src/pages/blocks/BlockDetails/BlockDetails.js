@@ -1,14 +1,11 @@
-import {useParams}  from "react-router-dom";
-import useFetch from "../../../utils/useFetch";
+import useFetcher from "../../../utils/useFetch";
 import Preload from "../../../components/Preload";
 import BreadCrumb from "../../../components/BreadCrumb";
 import ErrorHandling from "../../../components/ErrorHandling";
 
 export default function BlockDetails() {
 
-    const {id} = useParams();
-
-    const { pnd, res: block, err } = useFetch({path: `blocks/${id}/`});
+    const { pnd, res: block, err } = useFetcher({});
 
     return <>
       

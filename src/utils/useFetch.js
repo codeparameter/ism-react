@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {getLocalStorage} from "./useLocalStorage";
 
 export function useFetchStates(isPnd=false){
@@ -58,7 +59,7 @@ export function Fetch({
     });
 }
 
-export default function useFetch({
+export function useFetch({
       path, method='GET', headers={}, body=null
     }) {
   
@@ -69,6 +70,39 @@ export default function useFetch({
   }, [path]);
 
   return { pnd, res, err };
+}
+
+export function useBaseFetcher({
+      baseRoute, method='GET', headers={}, body=null
+    }) {
+      
+  
+  const [path, setPath] = useState('');
+  const location = useLocation();
+
+  useEffect(()=>{
+      const href = window.location.href;
+      let basePath = href.slice(
+                              href.indexOf(
+                                baseRoute
+                              )
+                          );
+      if(new URLSearchParams(window.location.search).size == 0 &&
+          basePath.slice(-1) != '/'
+        ){
+          basePath += '/';
+      }
+      setPath(basePath);
+  }, [location, path]);
+  return useFetch({path, method, headers, body});
+}
+
+export default function useFetcher({
+      method='GET', headers={}, body=null
+    }) {
+  
+  const baseRoute = useLocation().pathname.slice(1);
+  return useBaseFetcher({baseRoute, method, headers, body});
 }
 
 export function fetchPost({
