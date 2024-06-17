@@ -13,3 +13,5 @@ admin:
 
 Forms...
 createBlock: form + fetch
+
+buyer_user(name, mob_phone, company(name, address, phone))
