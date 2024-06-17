@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import useLocalStorage from "../utils/useLocalStorage";
 import { useFetchStates, fetchPost } from "../utils/useFetch";
+import Form from "../components/Form";
 
 export default function Login() {
 
@@ -48,6 +49,26 @@ export default function Login() {
               value={pass} onChange={(e)=>setPass(e.target.value)} />
             <input type="submit" value="Login" />
         </form>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Form fields={[
+            <>
+            <label htmlFor="username">username</label>
+            <input type="text" name="username" placeholder="Your Username" required
+              value={userName} onChange={(e)=>setUserName(e.target.value)} />
+            </>,
+            <input type="password" name="password" placeholder="Your Password" required
+              value={pass} onChange={(e)=>setPass(e.target.value)} />,
+            <input type="submit" value="Login" />
+        ]}/>
       </div>
     );
 }
