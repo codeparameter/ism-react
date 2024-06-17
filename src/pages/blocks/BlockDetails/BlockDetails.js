@@ -27,7 +27,7 @@ export default function BlockDetails() {
                             <div className="row">
                                 <div className="col-71">
                                     <div className="project-details-thumb">
-                                        <img src="/assets/img/project/project_details01.jpg" alt=""/>
+                                        <img src="/assets/img/carrara-white-marble-block-p560155-1b.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div className="col-29">
