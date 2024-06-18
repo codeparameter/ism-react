@@ -2,6 +2,7 @@ BlockDetails
 BlockList buttons
 green and red for available
 
+images from db
 pagination input page .no
 user search query
 
