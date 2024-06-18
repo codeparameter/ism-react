@@ -2,8 +2,11 @@ BlockDetails
 BlockList buttons
 green and red for available
 
+pagination input page .no
+user search query
+
 visual bugs:
-preLoader > pagination
+
 :
 
 error handling
