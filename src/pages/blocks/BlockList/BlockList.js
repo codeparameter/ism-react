@@ -3,10 +3,12 @@ import Preload from "../../../components/Preload";
 import ErrorHandling from "../../../components/ErrorHandling";
 import BreadCrumb from "../../../components/BreadCrumb";
 import BlockPreviewCard from "./components/BlockPreviewCard";
+import {WLinks} from "../../../components/LinkOrMT";
+import { Li } from "../../../components/Tags";
 
 export default function BlockList(){
 
-    let { pnd, err, list: blocks, next, previous, PBut} = usePagination();
+    let { pnd, err, list: blocks, page, leftLinks, rightLinks} = usePagination();
 
     return (
       <>
@@ -29,14 +31,13 @@ export default function BlockList(){
                                         { blocks.map(block => <BlockPreviewCard block={block} key={block.id}/>)}            
                                     </div>
                                     <div className="pagination-wrap mt-30">
-                                        <nav aria-label="Page navigation example">
+                                        <nav aria-label="Page navigation example" dir="ltr">
                                             <ul className="pagination list-wrap">
-                                                <li className="page-item"><a className="page-link" href="#"><i className="fas fa-angle-double-right"></i></a></li>
-                                                <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                                                <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                                <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                                <li className="page-item"><a className="page-link" href="#">4</a></li>
-                                                <li className="page-item next-page"><a className="page-link" href="#"><i className="fas fa-angle-double-left"></i></a></li>
+                                                <WLinks cls="page-link" links={leftLinks}
+                                                        wrapper={<Li className="page-item"/>} /> 
+                                                {page}
+                                                <WLinks cls="page-link" links={rightLinks}
+                                                        wrapper={<Li className="page-item"/>} /> 
                                             </ul>
                                         </nav>
                                     </div>
@@ -122,11 +123,6 @@ export default function BlockList(){
                     </div>
                 </div>
             </section>
-            
-            <div dir="ltr" style={{marginInline: 'auto', width: 'max-content'}}>
-                <PBut target={previous} txt='<' />
-                <PBut target={next} txt='>' />
-            </div>
         </>}
 
       </>
