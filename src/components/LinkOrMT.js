@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Wrapper from "./Tags";
+import {WrapByComponent} from "./Tags";
 
 export default function LinkOrMT({target, inner='', cls=''}) {
     return target ?
@@ -14,7 +14,7 @@ export function Links({links, cls=''}) {
 };
 
 export function WLinks({links, wrapper, cls=''}) {
-    return links.map((link, idx) => <Wrapper key={idx} 
+    return links.map((link, idx) => <WrapByComponent key={idx} 
                                     wrapper={wrapper} 
                                     props={{inner: <LinkOrMT {...{...link, cls}} />}} 
                                     />);
