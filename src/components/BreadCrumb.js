@@ -27,7 +27,7 @@ export default function BreadCrumb({title}) {
     
     usePageTitle(title);
 
-    return <section className="breadcrumb-area breadcrumb-bg" data-background="/assets/img/bg/breadcrumb_bg.jpg" style={{backgroundImage: 'url("/assets/img/bg/breadcrumb_bg.jpg")'}}>
+    return <section className="breadcrumb-area breadcrumb-bg" data-background="/assets/img/banner/banner02.jpg" style={{backgroundImage: 'url("/assets/img/banner/banner02.jpg")'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

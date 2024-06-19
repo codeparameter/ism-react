@@ -6,7 +6,7 @@ export default function Home() {
     return <>
         
         {/* <!-- banner-area --> */}
-        <section className="banner-area-nine banner-bg-nine" data-background="assets/img/banner/h10_hero_bg.jpg">
+        <section className="banner-area-nine banner-bg-nine" data-background="assets/img/banner/banner01.jpg">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">

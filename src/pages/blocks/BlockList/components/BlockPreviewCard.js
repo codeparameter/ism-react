@@ -7,7 +7,7 @@ export default function BlockPreviewCard({block}) {
             <div className="blog-post-thumb-two">
                 <Link className="block-preview" to={`/blocks/${block.id}`}>
                     <LazyLoadImage 
-                        src={block.pics.length > 0 ? `${process.env.REACT_APP_PROTOCOL}://${block.pics[0].url}` : "/assets/img/no-pic.png"}
+                        src={block.pics.length > 0 ? `${process.env.REACT_APP_PROTOCOL}://${block.pics[0].url}` : "/assets/img/no-img.jpg"}
                         width={413} height={413}
                         alt="Image Alt"
                     />
