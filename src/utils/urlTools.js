@@ -13,7 +13,7 @@ export function setUrlParams(url, params){
     }else{
         url += '&';
     }
-    const strParams = [];
-    Object.entries(params).map(param => strParams.push(`${param[0]}=${param[1]}`));
-    return `${url}${strParams.join('&')}`;
+    let paramsObj = new URLSearchParams();
+    Object.entries(params).map(param => paramsObj.append(param[0], param[1]));
+    return url + paramsObj.toString();
 }
