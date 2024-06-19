@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function BlockPreviewCard({block}) {
-    
     return <div className="col-md-6">
         <div className="blog-post-item-two">
             <div className="blog-post-thumb-two">
-                <Link className="block-preview" to={`/blocks/${block.id}`}><img src="/assets/img/download.jpg" alt=""/></Link>
+                <Link className="block-preview" to={`/blocks/${block.id}`}>
+                    <LazyLoadImage 
+                        src={block.pics.length > 0 ? `${process.env.REACT_APP_PROTOCOL}://${block.pics[0].url}` : "/assets/img/no-pic.png"}
+                        width={413} height={413}
+                        alt="Image Alt"
+                    />
+                </Link>
                 <a href="blog.html" className="tag tag-two" dir="ltr">{block.quality_name}</a>
             </div>
             <div className="blog-post-content-two">
