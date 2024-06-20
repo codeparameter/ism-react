@@ -2,7 +2,7 @@ BlockDetails
 BlockList buttons
 green and red for available
 
-images from db
+style swiper
 pagination input page .no
 user search query
 

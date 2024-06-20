@@ -2,6 +2,7 @@ import useFetcher from "../../../utils/useFetch";
 import Preload from "../../../components/Preload";
 import InternalBanner from "../../../components/InternalBanner";
 import ErrorHandling from "../../../components/ErrorHandling";
+import BlockSlider from "./components/BlockSlider";
 
 export default function BlockDetails() {
 
@@ -23,9 +24,10 @@ export default function BlockDetails() {
                         <div className="project-details-wrap">
                             <div className="row">
                                 <div className="col-71">
-                                    <div className="project-details-thumb">
+                                    {/* <div className="project-details-thumb">
                                         <img src="/assets/img/carrara-white-marble-block-p560155-1b.jpg" alt=""/>
-                                    </div>
+                                    </div> */}
+                                    <BlockSlider block={block} />
                                 </div>
                                 <div className="col-29">
                                     <div className="project-details-info">
