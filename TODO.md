@@ -2,7 +2,6 @@ BlockDetails
 BlockList buttons
 green and red for available
 
-make banner and bread crump apart 
 images from db
 pagination input page .no
 user search query
