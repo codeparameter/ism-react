@@ -72,27 +72,32 @@ export function useFetch({
   return { pnd, res, err };
 }
 
+
+function basePath(baseRoute){
+  const href = window.location.href;
+  let base_path = href.slice(
+                          href.indexOf(
+                            baseRoute
+                          )
+                      );
+  if(new URLSearchParams(window.location.search).size == 0 &&
+      base_path.slice(-1) != '/'
+    ){
+      base_path += '/';
+  }
+  return base_path;
+}
+
 export function useBaseFetcher({
       baseRoute, method='GET', headers={}, body=null
     }) {
       
   
-  const [path, setPath] = useState('');
+  const [path, setPath] = useState(basePath(baseRoute));
   const location = useLocation();
 
   useEffect(()=>{
-      const href = window.location.href;
-      let basePath = href.slice(
-                              href.indexOf(
-                                baseRoute
-                              )
-                          );
-      if(new URLSearchParams(window.location.search).size == 0 &&
-          basePath.slice(-1) != '/'
-        ){
-          basePath += '/';
-      }
-      setPath(basePath);
+      setPath(basePath(baseRoute));
   }, [location, path]);
   return useFetch({path, method, headers, body});
 }
