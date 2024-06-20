@@ -20,6 +20,7 @@
   display: block;
   width: 100%;
   aspect-ratio: 16/9;
+  height: unset;
   object-fit: cover;
 }
 
@@ -29,7 +30,6 @@
 }
 
 .thumbnail {
-  height: 80%;
   width: 100%;
 }
 
@@ -47,11 +47,4 @@
 
 .thumbnail-nav .swiper-slide-thumb-active {
   opacity: 1;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
