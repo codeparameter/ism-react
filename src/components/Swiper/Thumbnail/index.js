@@ -31,15 +31,7 @@ export default function Thumbnail({pics}) {
   const Pics = Slides(pics);
 
   return (
-    <>
-      <Swiper
-        spaceBetween={10}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="thumbnail"
-      >
-        {Pics}
-      </Swiper>
+    <div className='vertical-swiper'>
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
@@ -48,9 +40,18 @@ export default function Thumbnail({pics}) {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="thumbnail-nav"
+        direction={'vertical'}
       >
         {Pics}
       </Swiper>
-    </>
+      <Swiper
+        spaceBetween={10}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="thumbnail"
+      >
+        {Pics}
+      </Swiper>
+    </div>
   );
 }

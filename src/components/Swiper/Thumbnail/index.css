@@ -1,8 +1,11 @@
+.vertical-swiper{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .swiper {
-  width: 100%;
   height: max-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: 0;
 }
 
 .swiper-slide {
@@ -27,20 +30,27 @@
 }
 
 .thumbnail {
-  width: 100%;
+  width: 75.9644%;
 }
 
 .thumbnail-nav {
+  width: 24.0356%;
+  height: unset;
+  aspect-ratio: 16 / 9;
+  overflow-y: hidden;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding-left: 10px;
 }
 
 .thumbnail-nav .swiper-slide {
-  width: 25%;
-  height: 100%;
+  width: 100%;
   opacity: 0.4;
 }
 
 .thumbnail-nav .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.thumbnail-nav .swiper-slide {
+  height: max-content!important;
 }
