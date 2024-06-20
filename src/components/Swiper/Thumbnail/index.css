@@ -10,6 +10,9 @@
   font-size: 18px;
   background: #fff;
 
+  background-size: cover;
+  background-position: center;
+
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -21,12 +24,6 @@
   width: 100%;
   aspect-ratio: 16/9;
   height: unset;
-  object-fit: cover;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
 }
 
 .thumbnail {
@@ -34,7 +31,6 @@
 }
 
 .thumbnail-nav {
-  height: 20%;
   box-sizing: border-box;
   padding: 10px 0;
 }
