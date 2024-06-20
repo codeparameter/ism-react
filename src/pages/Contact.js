@@ -1,9 +1,9 @@
-import BreadCrumb from "../components/BreadCrumb";
+import InternalBanner from "../components/InternalBanner";
 
 export default function Contact() {
     return <>
     
-    <BreadCrumb title={'contact'} />
+    <InternalBanner title={'contact'} />
 
     {/*<!-- contact-area -->*/}
     <section className="inner-contact-area pt-120 pb-120">

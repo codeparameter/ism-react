@@ -1,9 +1,9 @@
-import BreadCrumb from "../components/BreadCrumb";
+import InternalBanner from "../components/InternalBanner";
 
 export default function About() {
     return <>
 
-        <BreadCrumb title={'about'} />
+        <InternalBanner title={'about'} />
 
         {/*<!-- about-area -->*/}
         <section className="about-area-eight pt-120 pb-120">

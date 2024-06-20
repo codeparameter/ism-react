@@ -1,7 +1,7 @@
 import usePagination from "../../../utils/usePagination";
 import Preload from "../../../components/Preload";
 import ErrorHandling from "../../../components/ErrorHandling";
-import BreadCrumb from "../../../components/BreadCrumb";
+import InternalBanner from "../../../components/InternalBanner";
 import BlockPreviewCard from "./components/BlockPreviewCard";
 import {WLinks} from "../../../components/LinkOrMT";
 import { Li } from "../../../components/Tags";
@@ -19,7 +19,7 @@ export default function BlockList(){
 
         {blocks && <>
 
-            <BreadCrumb title={'blocks'} />
+            <InternalBanner title={'blocks'} />
 
             <section className="blog-area pt-120 pb-120">
                 <div className="container">

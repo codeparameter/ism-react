@@ -1,6 +1,6 @@
 import useFetcher from "../../../utils/useFetch";
 import Preload from "../../../components/Preload";
-import BreadCrumb from "../../../components/BreadCrumb";
+import InternalBanner from "../../../components/InternalBanner";
 import ErrorHandling from "../../../components/ErrorHandling";
 
 export default function BlockDetails() {
@@ -14,7 +14,7 @@ export default function BlockDetails() {
 
       {block && <>
 
-        <BreadCrumb title={'details'} />
+        <InternalBanner title={'details'} />
         
         <section className="project-details-area pt-120 pb-120">
             <div className="container">
