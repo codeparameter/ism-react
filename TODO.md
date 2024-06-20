@@ -2,7 +2,7 @@ BlockDetails
 BlockList buttons
 green and red for available
 
-style swiper
+style of pagination + section paddings
 pagination input page .no
 user search query
 

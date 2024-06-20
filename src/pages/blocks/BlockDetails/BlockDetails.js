@@ -2,7 +2,7 @@ import useFetcher from "../../../utils/useFetch";
 import Preload from "../../../components/Preload";
 import InternalBanner from "../../../components/InternalBanner";
 import ErrorHandling from "../../../components/ErrorHandling";
-import BlockSlider from "./components/BlockSlider";
+import Thumbnail from "../../../components/Swiper/Thumbnail";
 
 export default function BlockDetails() {
 
@@ -27,7 +27,7 @@ export default function BlockDetails() {
                                     {/* <div className="project-details-thumb">
                                         <img src="/assets/img/carrara-white-marble-block-p560155-1b.jpg" alt=""/>
                                     </div> */}
-                                    <BlockSlider block={block} />
+                                    <Thumbnail pics={block.pics} />
                                 </div>
                                 <div className="col-29">
                                     <div className="project-details-info">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Import Swiper React components
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -8,28 +8,37 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
+import "./index.css"
+
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-import BlockSlides from './BlockSlides';
+export function Slides(pics) {
+    return <>
+        {
+        pics.map(pic => 
+                          <SwiperSlide key={pic.id}>
+                              <img src={`${process.env.REACT_APP_PROTOCOL}://${pic.url}`} 
+                                  width="690" height="440" alt="alt pic" />
+                          </SwiperSlide>
+                      )
+        }
+    </>
+};
 
-export default function BlockSlider({block}) {
+export default function Thumbnail({pics}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const BlockPics = BlockSlides(block);
+  const Pics = Slides(pics);
 
   return (
     <>
       <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
         spaceBetween={10}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        // className="mySwiper2"
+        className="thumbnail"
       >
-        {BlockPics}
+        {Pics}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -38,9 +47,9 @@ export default function BlockSlider({block}) {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        // className="mySwiper"
+        className="thumbnail-nav"
       >
-        {BlockPics}
+        {Pics}
       </Swiper>
     </>
   );
