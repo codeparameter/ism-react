@@ -33,10 +33,10 @@ export default function BlockList(){
                                     <div className="pagination-wrap mt-30">
                                         <nav aria-label="Page navigation example" dir="ltr">
                                             <ul className="pagination list-wrap">
-                                                <WLinks cls="page-link" links={leftLinks}
+                                                <WLinks cls="page-link" links={leftLinks.current}
                                                         wrapper={<Li className="page-item"/>} /> 
                                                 {page}
-                                                <WLinks cls="page-link" links={rightLinks}
+                                                <WLinks cls="page-link" links={rightLinks.current}
                                                         wrapper={<Li className="page-item"/>} /> 
                                             </ul>
                                         </nav>

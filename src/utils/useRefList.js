@@ -10,5 +10,5 @@ export default function useRefList({initialRefs = []}){
     function emptyRefs(){
         refs.current = [];
     }
-    return [refs.current, addRef, emptyRefs];
+    return [refs, addRef, emptyRefs];
 }
