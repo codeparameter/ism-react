@@ -54,6 +54,7 @@ export function Fetch({
       setErr(null);
     })
     .catch(err => {
+      setErr(e => e? e : {status: 'FTC'});
       setPnd(false);
       setRes(null);
     });
