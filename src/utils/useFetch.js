@@ -54,7 +54,7 @@ export function Fetch({
       setErr(null);
     })
     .catch(err => {
-      setErr(e => e? e : {status: 'FTC'});
+      setErr(e => e? e : {status: 'FTC'}); // error code or ftc (failed to fetch/connect)
       setPnd(false);
       setRes(null);
     });
