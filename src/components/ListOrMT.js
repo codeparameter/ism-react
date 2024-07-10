@@ -10,7 +10,7 @@ export default function ListOrMT({title, pnd, err, redirectLink, redirectMsg, li
           { err && <ErrorHandling code={`${err.status}`} redirectLink={redirectLink} redirectMsg={redirectMsg} /> }
           <Preload pnd={pnd} />
           <InternalBanner title={title} />
-          {list && list.length > 0 ? {inner} :  <MTL/>}
+          {list && list.length > 0 ? inner :  <MTL/>}
         </>
         );
 };
