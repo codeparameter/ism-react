@@ -61,6 +61,18 @@ export const LocDB = {
         'fa': 'دیجی‌معدن | جزئیات',
     },
     // errors
+    "title-FTC": {
+        'en': 'Failed to connect',
+        'fa': 'اتصال برقرار نشد',
+    },
+    "error-FTC-head": {
+        'en': 'Failed to connect.',
+        'fa': 'اتصال برقرار نشد.'
+    },
+    "error-FTC-body": {
+        'en': "Connection Refused. Please check your internet connection and if it was'nt the problem, contact our tech team.",
+        'fa': 'اتصال برقرار نشد. لطفا ابتدا اتصال اینترنت خود را بررسی کرده و اگر مشکل برطرف نشد، به پشتیبانی فنی سایت اطلاع دهید.'
+    },
     "title-404": {
         'en': 'NotFound | 404',
         'fa': 'یافت نشد | 404',
@@ -81,5 +93,13 @@ export const LocDB = {
     "redirect-blocks": {
         'en': 'Go Back To Blocks Page',
         'fa': 'برگرد به صفحه سنگ‌ها',
+    },
+    "redirect-upper": {
+        'en': 'Go Back To Upper Page',
+        'fa': 'برگرد به صفحه بالایی',
+    },
+    "redirect-login": {
+        'en': 'Redirect To Login',
+        'fa': 'برگرد به صقحه ورود',
     },
 };
