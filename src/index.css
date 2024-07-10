@@ -72,3 +72,10 @@ main.fix{
   margin-bottom: 0;
   overflow-y: auto;
 }
+
+/* mtl */
+
+.mtl{
+  text-align: center;
+  margin-block: 3rem;
+}

@@ -4,6 +4,11 @@ export const LocList = [
 ];
 
 export const LocDB = {
+    // symbols
+    "MTL": {
+        'en': 'List is empty.',
+        'fa': 'لیست خالی است.',
+    },
     // Lang
     "en": {
         'en': 'English',
