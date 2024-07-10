@@ -57,7 +57,7 @@ main.fix{
 
 .error-area .error-content {
   padding-block: 180px 25px;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   row-gap: 25px;
 }
