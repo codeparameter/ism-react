@@ -16,8 +16,8 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 export function Slides(pics) {
     return <>
         {
-        pics.map(pic => 
-                          <SwiperSlide key={pic.id}>
+        pics.map((pic, key) => 
+                          <SwiperSlide key={key}>
                               <img src={`${process.env.REACT_APP_PROTOCOL}://${pic.url}`} 
                                   width="690" height="440" alt="alt pic" />
                           </SwiperSlide>

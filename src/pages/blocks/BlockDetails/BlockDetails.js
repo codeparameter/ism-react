@@ -1,32 +1,21 @@
 import useFetcher from "../../../utils/useFetch";
-import Preload from "../../../components/Preload";
-import InternalBanner from "../../../components/InternalBanner";
-import ErrorHandling from "../../../components/ErrorHandling";
+import DetailsOrMt from "../../../components/DetailsOrMt";
 import Thumbnail from "../../../components/Swiper/Thumbnail";
 
 export default function BlockDetails() {
 
     const { pnd, res: block, err } = useFetcher({});
 
-    return <>
-      
-      { err && <ErrorHandling code={`${err.status}`} redirectLink="/blocks" redirectMsg="blocks" /> }
-      <Preload pnd={pnd} />
-
-      {block && <>
-
-        <InternalBanner title={'details'} />
-        
-        <section className="project-details-area pt-120 pb-120">
+    function Inner(){
+        return (
+            
+            <section className="project-details-area pt-120 pb-120">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="project-details-wrap">
                             <div className="row">
                                 <div className="col-71">
-                                    {/* <div className="project-details-thumb">
-                                        <img src="/assets/img/carrara-white-marble-block-p560155-1b.jpg" alt=""/>
-                                    </div> */}
                                     <Thumbnail pics={block.pics} />
                                 </div>
                                 <div className="col-29">
@@ -88,7 +77,19 @@ export default function BlockDetails() {
                 </div>
             </div>
         </section>
+        );
+    }
 
-      </>}
+    return <>
+
+      <DetailsOrMt
+        title="details"
+        err={err}
+        pnd={pnd}
+        redirectLink="/blocks"
+        redirectMsg="blocks"
+        data={block}
+        inner={<Inner/>}
+      />
     </>;
 }
