@@ -116,11 +116,11 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li><NavLink to="contact">تماس با ما</NavLink></li>
-                                        <li className="menu-item-has-children" style={{padding: '36px 15px', color: 'var(--tg-white)'}}><i className="fa fa-globe" aria-hidden="true"></i>
+                                        {/* <li className="menu-item-has-children" style={{padding: '36px 15px', color: 'var(--tg-white)'}}><i className="fa fa-globe" aria-hidden="true"></i>
                                             <ul className="sub-menu">
                                                 {constantDBs.LocList.map(loc => <LanguageItem key={loc} lang={loc} />)}
                                             </ul>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="header-action header-action-six d-none d-md-block">
