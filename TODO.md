@@ -10,8 +10,6 @@ visual bugs:
 
 :
 
-error handling
-
 v2:
 admin:
 

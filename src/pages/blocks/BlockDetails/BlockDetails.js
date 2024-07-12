@@ -86,8 +86,6 @@ export default function BlockDetails() {
         title="details"
         err={err}
         pnd={pnd}
-        redirectLink="/blocks"
-        redirectMsg="blocks"
         data={block}
         inner={<Inner/>}
       />

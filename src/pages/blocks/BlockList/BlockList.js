@@ -119,8 +119,6 @@ export default function BlockList(){
         <ListOrMT
             title="blocks"
             err={err}
-            redirectLink="/blocks"
-            redirectMsg="blocks"
             pnd={pnd}
             list={blocks}
             inner={<Inner/>}
