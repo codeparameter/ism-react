@@ -12,7 +12,7 @@ export default function BlockPreviewCard({block}) {
                         alt="Image Alt"
                     />
                 </Link>
-                <a href="blog.html" className="tag tag-two" dir="ltr">{block.quality_name}</a>
+                <a href="blog.html" className="tag tag-two" dir="ltr">{block.quality_grade}</a>
             </div>
             <div className="blog-post-content-two">
                 <h2 className="title"><Link className="block-preview" to={`/blocks/${block.id}`}>{block.material_name} {block.city_name}</Link></h2>

@@ -24,7 +24,7 @@ export default function BlockDetails() {
                                         <ul className="list-wrap">
                                             <li><span>نوع سنگ :</span>{block.material_name}</li>
                                             <li><span>شهر :</span>{block.city_name}</li>
-                                            <li><span>کیفیت :</span><span dir="ltr">{block.quality_name}</span></li>
+                                            <li><span>کیفیت :</span><span dir="ltr">{block.quality_grade}</span></li>
                                             <li><span>ابعاد :</span>{block.length}x{block.height}x{block.width}</li>
                                             <li><span>وضعیت :</span>{block.not_available ? 'ناموجود' : 'موجود'}</li>
                                             <li className="social">
