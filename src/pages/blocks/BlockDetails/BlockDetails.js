@@ -21,10 +21,11 @@ export default function BlockDetails() {
                                 </div>
                                 <div className="col-29">
                                     <div className="project-details-info">
-                                        <h4 className="title">اطلاعات پروژه</h4>
+                                        <h4 className="title">اطلاعات سنگ</h4>
                                         <ul className="list-wrap">
                                             <li><span>نوع سنگ :</span>{block.material}</li>
                                             <li><span>شهر :</span>{block.city}</li>
+                                            <li><span>کد :</span><span>{block.code}</span></li>
                                             <li><span>کیفیت :</span><span dir="ltr">{block.quality_grade}</span></li>
                                             <li><span>ابعاد :</span>{block.length}x{block.height}x{block.width}</li>
                                             <li><span>وضعیت :</span>{useLocPhrase(block.availability_status)}</li>
