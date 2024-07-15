@@ -1,4 +1,5 @@
 import useFetcher from "../../../utils/useFetch";
+import useLocPhrase from "../../../utils/GlobalContext/states/useLoc";
 import DetailsOrMt from "../../../components/DetailsOrMt";
 import Thumbnail from "../../../components/Swiper/Thumbnail";
 
@@ -22,11 +23,11 @@ export default function BlockDetails() {
                                     <div className="project-details-info">
                                         <h4 className="title">اطلاعات پروژه</h4>
                                         <ul className="list-wrap">
-                                            <li><span>نوع سنگ :</span>{block.material_name}</li>
-                                            <li><span>شهر :</span>{block.city_name}</li>
+                                            <li><span>نوع سنگ :</span>{block.material}</li>
+                                            <li><span>شهر :</span>{block.city}</li>
                                             <li><span>کیفیت :</span><span dir="ltr">{block.quality_grade}</span></li>
                                             <li><span>ابعاد :</span>{block.length}x{block.height}x{block.width}</li>
-                                            <li><span>وضعیت :</span>{block.not_available ? 'ناموجود' : 'موجود'}</li>
+                                            <li><span>وضعیت :</span>{useLocPhrase(block.availability_status)}</li>
                                             <li className="social">
                                                 <span>اشتراک:</span>
                                                 <ul className="list-wrap">

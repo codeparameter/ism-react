@@ -9,6 +9,18 @@ export const LocDB = {
         'en': 'List is empty.',
         'fa': 'لیست خالی است.',
     },
+    "Available": {
+        'en': 'Available',
+        'fa': 'موجود',
+    },
+    "Ordered": {
+        'en': 'Ordered',
+        'fa': 'سفارش شده',
+    },
+    "Sold": {
+        'en': 'Sold',
+        'fa': 'فروخته شد',
+    },
     // Lang
     "en": {
         'en': 'English',

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import useLocPhrase from "../../../../utils/GlobalContext/states/useLoc";
 
 export default function BlockPreviewCard({block}) {
     return <div className="col-md-6">
@@ -15,8 +16,9 @@ export default function BlockPreviewCard({block}) {
                 <a href="blog.html" className="tag tag-two" dir="ltr">{block.quality_grade}</a>
             </div>
             <div className="blog-post-content-two">
-                <h2 className="title"><Link className="block-preview" to={`/blocks/${block.id}`}>{block.material_name} {block.city_name}</Link></h2>
+                <h2 className="title"><Link className="block-preview" to={`/blocks/${block.id}`}>{block.material} {block.city}</Link></h2>
                 <p style={{marginBottom: 0}}>{block.length}x{block.height}x{block.width}</p>
+                <p style={{marginBottom: 0}}>{useLocPhrase(block.availability_status)}</p>
             </div>
         </div>
     </div>;
